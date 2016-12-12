@@ -1,0 +1,222 @@
+#%RAML 1.0
+title: My Company API
+baseUri: http://my-company.com/{version}
+version: v1
+mediaType:  application/vnd.api+json
+description: My Company API description RAML templates
+uses:
+  FrameWork: yii
+types:
+  ID:
+    type: integer
+    required: true
+  Type:
+    type: string
+    required: true
+    minLength: 1
+    maxLength: 255
+  DataObject:
+    type: object
+    required: true
+  DataArray:
+    type: array
+    required: true
+  RelationshipsDataItem:
+    type: object
+    properties:
+      id: ID
+      type: Type
+  TagsRelationships:
+    description: Tag relationship description
+    type: object
+    properties:
+      data:
+        type: DataArray
+        items:
+          type: RelationshipsDataItem
+  RubricRelationships:
+    type: object
+    properties:
+      data:
+        type: DataArray
+        items:
+          type: RelationshipsDataItem
+  TagAttributes:
+    description: Tag specific attributes declaration
+    type: object
+    properties:
+      title:
+        type: string
+        required: true
+        minLength: 3
+        maxLength: 255
+  Tag:
+    type: object
+    properties:
+      type: Type
+      id: ID
+      attributes: TagAttributes
+      relationships:
+        type: RubricRelationships
+  RubricAttributes:
+    description: Rubric attributes declaration
+    type: object
+    properties:
+      name_rubric:
+        type: string
+        required: true
+        maxLength: 500
+      body:
+        type: string
+        required: true
+      url:
+        type: string
+        required: true
+        maxLength: 255
+      meta_title:
+        type: string
+        required: false
+        maxLength: 255
+      meta_description:
+        type: string
+        required: false
+        maxLength: 255
+      title_vk_fb:
+        type: string
+        required: true
+        maxLength: 255
+      body_vk_fb:
+        type: string
+        required: false
+        maxLength: 255
+      fb_image:
+        type: string
+        required: false
+        maxLength: 255
+      vk_image:
+        type: string
+        required: false
+        maxLength: 255
+      show_in_menu:
+        description: Is this Rubric visible in menu
+        type: boolean
+        required: false
+      show_in_tape:
+        description: Is this Rubric visible in tape
+        type: boolean
+        required: false
+      publish_to_rss:
+        description: Is this Rubric visible in RSS
+        type: boolean
+        required: false
+      publish_to_aggregators:
+        description: Is this Rubric visible in aggregators
+        type: boolean
+        required: false
+      status:
+        description: The state of an article
+        enum: ["draft", "published", "postponed", "archived"]
+  Rubric:
+    type: object
+    properties:
+      type: Type
+      id: ID
+      attributes: RubricAttributes
+      relationships: TagsRelationships
+  FilterID:
+    type: string
+    pattern: '/^[,\ \d]*$/'
+  JsonApiQuerySearch:
+    type: object
+    properties:
+      page:
+        type: object
+        properties:
+          number:
+            type: integer
+            required: true
+            default: 1
+            example: 1
+            description: номер страницы
+          size:
+            type: integer
+            required: true
+            default: 15
+            example: 15
+            description: количество элементов на странице
+      sort:
+        type: string
+        pattern: "/^[-a-z,\ ]*$/"
+
+/rubrics:
+  get:
+    queryParameters:
+      type: JsonApiQuerySearch
+    responses:
+      200:
+        body:
+          application/json.vnd+json:
+            type: Rubric[]
+  post:
+    body:
+      application/json.vnd+json:
+        type: Rubric
+    responses:
+      200:
+        body:
+          application/json.vnd+json:
+            type: Rubric
+  /{id}:
+    get:
+      responses:
+        200:
+          body:
+            application/json.vnd+json:
+              type: Rubric
+    patch:
+      body:
+        application/json.vnd+json:
+          type: Rubric
+      responses:
+        200:
+          body:
+            application/json.vnd+json:
+              type: Rubric
+    delete:
+      responses:
+        204:
+    /relationships/tags:
+      get:
+        responses:
+          200:
+            body:
+              application/json.vnd+json:
+                type: TagsRelationships
+      post:
+        body:
+          application/json.vnd+json:
+            type: TagsRelationships
+        responses:
+          201:
+            body:
+              application/json.vnd+json:
+                type: TagsRelationships
+      patch:
+        body:
+          application/json.vnd+json:
+            type: TagsRelationships
+        responses:
+          200:
+            body:
+              application/json.vnd+json:
+                type: TagsRelationships
+      delete:
+        responses:
+          204:
+    /tags:
+      get:
+        responses:
+          200:
+            body:
+              application/json.vnd+json:
+                type: Tag[]
