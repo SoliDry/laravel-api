@@ -2539,16 +2539,16 @@
         },
         {
             "name": "rjapi/raml-json-api",
-            "version": "1.0.9",
+            "version": "1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RJAPI/raml-json-api.git",
-                "reference": "63769c5046ce227e622a1a4ae90d9b57756b3df4"
+                "reference": "76012c406a148c86c99bcf1a5fd8342a4c309747"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RJAPI/raml-json-api/zipball/63769c5046ce227e622a1a4ae90d9b57756b3df4",
-                "reference": "63769c5046ce227e622a1a4ae90d9b57756b3df4",
+                "url": "https://api.github.com/repos/RJAPI/raml-json-api/zipball/76012c406a148c86c99bcf1a5fd8342a4c309747",
+                "reference": "76012c406a148c86c99bcf1a5fd8342a4c309747",
                 "shasum": ""
             },
             "require": {
@@ -2568,7 +2568,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "RAML-JSON-API PHP-code generator (based on RAML-types) for different FrameWorks aka Laravel/Yii/Symfony etc, with complete support of JSON-API data format",
-            "time": "2016-12-11 17:13:51"
+            "time": "2016-12-13 06:40:57"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
