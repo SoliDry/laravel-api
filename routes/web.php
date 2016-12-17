@@ -11,6 +11,9 @@
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/v1/rubric', '\App\Modules\v1\Controllers\RubricController@index');

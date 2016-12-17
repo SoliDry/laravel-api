@@ -5,9 +5,10 @@
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": ">=5.6.4",
+        "php": ">=7.0",
         "laravel/framework": "5.3.*",
-        "rjapi/raml-json-api": "~1.0.9"
+        "rjapi/raml-json-api": "dev-develop",
+        "nwidart/laravel-modules": "^1.14"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -21,7 +22,9 @@
             "database"
         ],
         "psr-4": {
-            "App\\": "app/"
+            "App\\": "app/",
+            "Modules\\": "Modules/",
+            "App\\Modules\\v1\\Controllers\\": "app/Modules/v1/Controllers"
         }
     },
     "autoload-dev": {
