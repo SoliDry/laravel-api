@@ -3,10 +3,10 @@ namespace Modules\V2\Entities;
 
 use rjapi\extension\BaseModel;
 
-class Tag extends BaseModel 
+class Article extends BaseModel 
 {
     protected $primaryKey = "id";
-    protected $table = "tag";
+    protected $table = "article";
     public $timestamps = false;
 
 }

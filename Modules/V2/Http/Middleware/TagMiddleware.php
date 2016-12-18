@@ -1,9 +1,9 @@
 <?php
-namespace Modules\V2\Middleware\Entities;
+namespace Modules\V2\Http\Middleware;
 
 use rjapi\extension\BaseFormRequest;
 
-class BaseFormTag extends BaseFormRequest 
+class TagMiddleware extends BaseFormRequest 
 {
     public $id = null;
     // Attributes
@@ -23,7 +23,7 @@ class BaseFormTag extends BaseFormRequest
 
     public  function relations(): array {
         return [
-            "rubric",
+            "article",
         ];
     }
 
