@@ -6,7 +6,7 @@ use rjapi\extension\BaseModel;
 class Article extends BaseModel 
 {
     protected $primaryKey = "id";
-    protected $table = "article";
+    protected $table = "articles";
     public $timestamps = false;
 
 }
