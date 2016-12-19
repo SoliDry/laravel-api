@@ -1108,6 +1108,69 @@
             "time": "2016-10-19 20:38:46"
         },
         {
+            "name": "league/fractal",
+            "version": "0.14.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/fractal.git",
+                "reference": "56ad8933fbb40328ca3321c84143b2c16186eebf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/fractal/zipball/56ad8933fbb40328ca3321c84143b2c16186eebf",
+                "reference": "56ad8933fbb40328ca3321c84143b2c16186eebf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "require-dev": {
+                "illuminate/contracts": "~5.0",
+                "mockery/mockery": "~0.9",
+                "pagerfanta/pagerfanta": "~1.0.0",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~1.5",
+                "zendframework/zend-paginator": "~2.3"
+            },
+            "suggest": {
+                "illuminate/pagination": "The Illuminate Pagination component.",
+                "pagerfanta/pagerfanta": "Pagerfanta Paginator",
+                "zendframework/zend-paginator": "Zend Framework Paginator"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.13-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Fractal\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Phil Sturgeon",
+                    "email": "me@philsturgeon.uk",
+                    "homepage": "http://philsturgeon.uk/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Handle the output of complex data structures ready for API output.",
+            "homepage": "http://fractal.thephpleague.com/",
+            "keywords": [
+                "api",
+                "json",
+                "league",
+                "rest"
+            ],
+            "time": "2016-07-21 09:56:14"
+        },
+        {
             "name": "monolog/monolog",
             "version": "1.22.0",
             "source": {
@@ -2373,23 +2436,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RJAPI/raml-json-api.git",
-                "reference": "08bcb703c8d79f7d5150da592816b697ccf865b5"
+                "reference": "78000a804eb735536e8f22cca36be5f3bacd038e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RJAPI/raml-json-api/zipball/08bcb703c8d79f7d5150da592816b697ccf865b5",
-                "reference": "08bcb703c8d79f7d5150da592816b697ccf865b5",
+                "url": "https://api.github.com/repos/RJAPI/raml-json-api/zipball/78000a804eb735536e8f22cca36be5f3bacd038e",
+                "reference": "78000a804eb735536e8f22cca36be5f3bacd038e",
                 "shasum": ""
             },
             "require": {
                 "alecsammon/php-raml-parser": "^2.1",
                 "codeception/codeception": "^2.2",
                 "laravel/framework": "^5.3",
+                "league/fractal": "^0.14.0",
                 "nwidart/laravel-modules": "^1.14",
-                "php": "^7.0",
-                "seld/jsonlint": "^1.5",
-                "woohoolabs/yin": "^1.0",
-                "zendframework/zend-diactoros": "^1.3"
+                "php": "^7.0"
             },
             "type": "rjapi-raml",
             "autoload": {
@@ -2400,7 +2461,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "RAML-JSON-API PHP-code generator (based on RAML-types) for Laravel framework, with complete support of JSON-API data format",
-            "time": "2016-12-19 09:22:59"
+            "time": "2016-12-19 19:29:08"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -2914,52 +2975,6 @@
             "description": "Library that helps with managing the version number of Git-hosted PHP projects",
             "homepage": "https://github.com/sebastianbergmann/version",
             "time": "2016-10-03 07:35:21"
-        },
-        {
-            "name": "seld/jsonlint",
-            "version": "1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Seldaek/jsonlint.git",
-                "reference": "19495c181d6d53a0a13414154e52817e3b504189"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/jsonlint/zipball/19495c181d6d53a0a13414154e52817e3b504189",
-                "reference": "19495c181d6d53a0a13414154e52817e3b504189",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.3 || ^7.0"
-            },
-            "bin": [
-                "bin/jsonlint"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Seld\\JsonLint\\": "src/Seld/JsonLint/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jordi Boggiano",
-                    "email": "j.boggiano@seld.be",
-                    "homepage": "http://seld.be"
-                }
-            ],
-            "description": "JSON Linter",
-            "keywords": [
-                "json",
-                "linter",
-                "parser",
-                "validator"
-            ],
-            "time": "2016-11-14 17:59:58"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -4114,112 +4129,6 @@
                 "validate"
             ],
             "time": "2016-11-23 20:04:58"
-        },
-        {
-            "name": "woohoolabs/yin",
-            "version": "1.0.2",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/woohoolabs/yin.git",
-                "reference": "3d0767d8e64aca3348cda1248ad708da3df7c36a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/woohoolabs/yin/zipball/3d0767d8e64aca3348cda1248ad708da3df7c36a",
-                "reference": "3d0767d8e64aca3348cda1248ad708da3df7c36a",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.6.0||^7.0.0",
-                "psr/http-message-implementation": "^1.0.0"
-            },
-            "require-dev": {
-                "justinrainbow/json-schema": "^2.0.0",
-                "phpunit/phpunit": "^5.4.0",
-                "seld/jsonlint": "^1.4.0",
-                "squizlabs/php_codesniffer": "^2.3.1",
-                "zendframework/zend-diactoros": "^1.3.0"
-            },
-            "suggest": {
-                "justinrainbow/json-schema": "Allows to validate the request and response body against the JSON API schema",
-                "seld/jsonlint": "Allows to lint the request and response body"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "WoohooLabs\\Yin\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Máté Kocsis",
-                    "email": "kocsismate@woohoolabs.com"
-                }
-            ],
-            "description": "Woohoo Labs. Yin",
-            "homepage": "http://yin.woohoolabs.com",
-            "keywords": [
-                "HATEOAS",
-                "Woohoo Labs.",
-                "Yin",
-                "json api",
-                "psr-7"
-            ],
-            "time": "2016-11-17 07:25:55"
-        },
-        {
-            "name": "zendframework/zend-diactoros",
-            "version": "1.3.7",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/zendframework/zend-diactoros.git",
-                "reference": "969ff423d3f201da3ff718a5831bb999bb0669b0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/zend-diactoros/zipball/969ff423d3f201da3ff718a5831bb999bb0669b0",
-                "reference": "969ff423d3f201da3ff718a5831bb999bb0669b0",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^5.4 || ^7.0",
-                "psr/http-message": "~1.0"
-            },
-            "provide": {
-                "psr/http-message-implementation": "~1.0.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.6 || ^5.5",
-                "squizlabs/php_codesniffer": "^2.3.1"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3-dev",
-                    "dev-develop": "1.4-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Zend\\Diactoros\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "description": "PSR HTTP Message implementations",
-            "homepage": "https://github.com/zendframework/zend-diactoros",
-            "keywords": [
-                "http",
-                "psr",
-                "psr-7"
-            ],
-            "time": "2016-10-11 13:25:21"
         }
     ],
     "packages-dev": [
