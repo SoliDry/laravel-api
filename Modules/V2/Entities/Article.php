@@ -7,6 +7,6 @@ class Article extends BaseModel
 {
     protected $primaryKey = "id";
     protected $table = "articles";
-    public $timestamps = false;
+    public $timestamps = true;
 
 }
