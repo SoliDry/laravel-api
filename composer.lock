@@ -2436,12 +2436,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RJAPI/raml-json-api.git",
-                "reference": "78000a804eb735536e8f22cca36be5f3bacd038e"
+                "reference": "cc7eef744e4d27043080cc380bbef6093b83e7d7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RJAPI/raml-json-api/zipball/78000a804eb735536e8f22cca36be5f3bacd038e",
-                "reference": "78000a804eb735536e8f22cca36be5f3bacd038e",
+                "url": "https://api.github.com/repos/RJAPI/raml-json-api/zipball/cc7eef744e4d27043080cc380bbef6093b83e7d7",
+                "reference": "cc7eef744e4d27043080cc380bbef6093b83e7d7",
                 "shasum": ""
             },
             "require": {
@@ -2461,7 +2461,7 @@
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "RAML-JSON-API PHP-code generator (based on RAML-types) for Laravel framework, with complete support of JSON-API data format",
-            "time": "2016-12-19 19:29:08"
+            "time": "2016-12-22 05:57:42"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
