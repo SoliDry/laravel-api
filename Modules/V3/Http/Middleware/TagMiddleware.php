@@ -11,17 +11,17 @@ class TagMiddleware extends BaseFormRequest
 
     // Relations
 
-    public  function authorize(): bool {
+    public function authorize(): bool {
         return true;
     }
 
-    public  function rules(): array {
+    public function rules(): array {
         return [
             "title" => "string|required|min:3|max:255",
         ];
     }
 
-    public  function relations(): array {
+    public function relations(): array {
         return [
             "article",
         ];
