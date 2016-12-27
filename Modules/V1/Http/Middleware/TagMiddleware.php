@@ -8,6 +8,7 @@ class TagMiddleware extends BaseFormRequest
     public $id = null;
     // Attributes
     public $title = null;
+    public $article_id = null;
 
     // Relations
 
@@ -18,6 +19,7 @@ class TagMiddleware extends BaseFormRequest
     public function rules(): array {
         return [
             "title" => "string|required|min:3|max:255",
+            "article_id" => "integer|required|max:10",
         ];
     }
 

@@ -8,10 +8,9 @@ class Article extends BaseModel
     protected $primaryKey = "id";
     protected $table = "article";
     public $timestamps = false;
-
-    public function tag()
-    {
-        return $this->hasMany('Modules\V1\Entities\Tag');
+    public function tag() {
+        return $this->hasMany(Tag::class);
     }
+
 
 }
