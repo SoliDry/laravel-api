@@ -41,10 +41,6 @@ types:
         required: true
         minLength: 3
         maxLength: 255
-      article_id:
-        type: integer
-        required: true
-        maximum: 10
   Tag:
     type: object
     properties:
@@ -52,7 +48,7 @@ types:
       id: ID
       attributes: TagAttributes
       relationships:
-        type: ArticleRelationships
+        type: ArticleRelationships[]
   ArticleRelationships:
     type: object
     properties:
@@ -86,13 +82,43 @@ types:
       status:
         description: The state of an article
         enum: ["draft", "published", "postponed", "archived"]
+      topic_id:
+        description: ManyToOne Topic relationship
+        required: true
+        type: integer
+        minimum: 1
+        maximum: 9
   Article:
     type: object
     properties:
       type: Type
       id: ID
       attributes: ArticleAttributes
-      relationships: TagRelationships
+      relationships:
+        type: TagRelationships[] | TopicRelationships
+  TopicRelationships:
+    type: object
+    properties:
+      data:
+        type: DataArray
+        items:
+          type: RelationshipsDataItem
+  TopicAttributes:
+    type: object
+    properties:
+      title:
+        required: true
+        type: string
+        minLength: 16
+        maxLength: 256
+  Topic:
+    type: object
+    properties:
+      type: Type
+      id: ID
+      attributes: TopicAttributes
+      relationships:
+        type: ArticleRelationships[]
   FilterID:
     type: string
     pattern: '/^[,\ \d]*$/'

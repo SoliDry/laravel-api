@@ -8,9 +8,13 @@ class Article extends BaseModel
     protected $primaryKey = "id";
     protected $table = "article";
     public $timestamps = false;
+
     public function tag() {
-        return $this->hasMany(Tag::class);
+        return $this->belongsToMany(Tag::class, 'tag_article');
     }
 
+    public function topic() {
+        return $this->belongsTo(Topic::class);
+    }
 
 }

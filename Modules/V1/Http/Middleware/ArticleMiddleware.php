@@ -12,6 +12,7 @@ class ArticleMiddleware extends BaseFormRequest
     public $url = null;
     public $show_in_top = null;
     public $status = null;
+    public $topic_id = null;
 
     public function authorize(): bool {
         return true;
@@ -26,14 +27,16 @@ class ArticleMiddleware extends BaseFormRequest
             "show_in_top" => "boolean",
             // The state of an article
             "status" => "in:draft,published,postponed,archived",
+            // ManyToOne Topic relationship
+            "topic_id" => "required|integer|min:1|max:9",
         ];
     }
 
     public function relations(): array {
         return [
             "tag",
+            "topic",
         ];
     }
-
 
 }

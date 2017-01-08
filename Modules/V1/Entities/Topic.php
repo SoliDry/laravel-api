@@ -3,14 +3,14 @@ namespace Modules\V1\Entities;
 
 use rjapi\extension\BaseModel;
 
-class Tag extends BaseModel 
+class Topic extends BaseModel 
 {
     protected $primaryKey = "id";
-    protected $table = "tag";
+    protected $table = "topic";
     public $timestamps = false;
 
     public function article() {
-        return $this->belongsToMany(Article::class, 'tag_article');
+        return $this->hasMany(Article::class);
     }
 
 }

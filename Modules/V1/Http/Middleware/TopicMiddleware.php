@@ -3,7 +3,7 @@ namespace Modules\V1\Http\Middleware;
 
 use rjapi\extension\BaseFormRequest;
 
-class TagMiddleware extends BaseFormRequest 
+class TopicMiddleware extends BaseFormRequest 
 {
     public $id = null;
     // Attributes
@@ -15,7 +15,7 @@ class TagMiddleware extends BaseFormRequest
 
     public function rules(): array {
         return [
-            "title" => "string|required|min:3|max:255",
+            "title" => "required|string|min:16|max:256",
         ];
     }
 
