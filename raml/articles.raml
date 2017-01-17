@@ -119,6 +119,31 @@ types:
       attributes: TopicAttributes
       relationships:
         type: ArticleRelationships[]
+  MyOh_MyRelationships:
+    description: MyOh_My relationship description
+    type: object
+    properties:
+      data:
+        type: DataArray
+        items:
+          type: RelationshipsDataItem
+  MyOh_MyAttributes:
+    description: Always set attributes for object
+    type: object
+    properties:
+      title:
+        type: string
+        required: true
+        minLength: 3
+        maxLength: 255
+  MyOh_My:
+    type: object
+    properties:
+      type: Type
+      id: ID
+      attributes: TagAttributes
+      relationships:
+        type: ArticleRelationships[]
   FilterID:
     type: string
     pattern: '/^[,\ \d]*$/'
@@ -129,28 +154,24 @@ types:
         type: string
       attributes: ArticleAttributes
       relationships: TagRelationships
-  JsonApiQuerySearch:
+  QueryParams:
     type: object
     properties:
       page:
-        type: object
-        properties:
-          number:
-            type: integer
-            required: true
-            default: 1
-            example: 1
-            description: page number
-          size:
-            type: integer
-            required: true
-            default: 15
-            example: 15
-            description: elements per page
+        type: integer
+        required: false
+        description: page number
+      limit:
+        type: integer
+        required: false
+        default: 15
+        example: 15
+        description: elements per page
       sort:
         type: string
-        pattern: "/^[-a-z,\ ]*$/"
-
+        required: false
+        pattern: "asc|desc"
+        default: "desc"
 /article:
   get:
     queryParameters:

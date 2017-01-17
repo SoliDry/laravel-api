@@ -5,6 +5,7 @@ Route::group(['middleware' => 'web', 'prefix' => 'v1', 'namespace' => 'Modules\V
     Route::get('/', 'V1Controller@index');
 });
 
+// Tag routes
 Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers'], function()
 {
     Route::get('/tag', 'TagController@index');
@@ -19,6 +20,7 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers']
     Route::delete('/tag/{id}/relationships/{relations}', 'TagController@deleteRelations');
 });
 
+// Article routes
 Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers'], function()
 {
     Route::get('/article', 'ArticleController@index');
@@ -33,6 +35,7 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers']
     Route::delete('/article/{id}/relationships/{relations}', 'ArticleController@deleteRelations');
 });
 
+// Topic routes
 Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers'], function()
 {
     Route::get('/topic', 'TopicController@index');
@@ -45,4 +48,19 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers']
     Route::post('/topic/{id}/relationships/{relations}', 'TopicController@createRelations');
     Route::patch('/topic/{id}/relationships/{relations}', 'TopicController@updateRelations');
     Route::delete('/topic/{id}/relationships/{relations}', 'TopicController@deleteRelations');
+});
+
+// MyOhMy routes
+Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers'], function()
+{
+    Route::get('/myoh_my', 'MyOhMyController@index');
+    Route::get('/myoh_my/{id}', 'MyOhMyController@view');
+    Route::post('/myoh_my', 'MyOhMyController@create');
+    Route::patch('/myoh_my/{id}', 'MyOhMyController@update');
+    Route::delete('/myoh_my/{id}', 'MyOhMyController@delete');
+    // relation routes
+    Route::get('/myoh_my/{id}/relationships/{relations}', 'MyOhMyController@relations');
+    Route::post('/myoh_my/{id}/relationships/{relations}', 'MyOhMyController@createRelations');
+    Route::patch('/myoh_my/{id}/relationships/{relations}', 'MyOhMyController@updateRelations');
+    Route::delete('/myoh_my/{id}/relationships/{relations}', 'MyOhMyController@deleteRelations');
 });

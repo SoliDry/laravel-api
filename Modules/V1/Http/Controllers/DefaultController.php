@@ -5,5 +5,4 @@ use rjapi\extension\BaseController;
 
 class DefaultController extends BaseController 
 {
-    protected $jsonApi = true;
 }
