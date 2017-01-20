@@ -5,7 +5,8 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateTagTable extends Migration 
 {
-    public function up() {
+    public function up() 
+    {
         Schema::create('tag', function(Blueprint $table) {
             $table->increments('id');
             $table->string('title');
@@ -13,7 +14,8 @@ class CreateTagTable extends Migration
         });
     }
 
-    public function down() {
+    public function down() 
+    {
         Schema::dropIfExists('tag');
     }
 

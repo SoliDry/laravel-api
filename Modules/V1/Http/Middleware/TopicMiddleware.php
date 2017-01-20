@@ -9,17 +9,20 @@ class TopicMiddleware extends BaseFormRequest
     // Attributes
     public $title = null;
 
-    public function authorize(): bool {
+    public function authorize(): bool 
+    {
         return true;
     }
 
-    public function rules(): array {
+    public function rules(): array 
+    {
         return [
             "title" => "required|string|min:16|max:256",
         ];
     }
 
-    public function relations(): array {
+    public function relations(): array 
+    {
         return [
             "article",
         ];

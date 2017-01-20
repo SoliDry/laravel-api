@@ -9,7 +9,8 @@ class Tag extends BaseModel
     protected $table = "tag";
     public $timestamps = false;
 
-    public function article() {
+    public function article() 
+    {
         return $this->belongsToMany(Article::class, 'tag_article');
     }
 

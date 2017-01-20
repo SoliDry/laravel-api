@@ -9,7 +9,8 @@ class Topic extends BaseModel
     protected $table = "topic";
     public $timestamps = false;
 
-    public function article() {
+    public function article() 
+    {
         return $this->hasMany(Article::class);
     }
 

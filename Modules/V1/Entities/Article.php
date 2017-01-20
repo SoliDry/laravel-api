@@ -9,11 +9,13 @@ class Article extends BaseModel
     protected $table = "article";
     public $timestamps = false;
 
-    public function tag() {
+    public function tag() 
+    {
         return $this->belongsToMany(Tag::class, 'tag_article');
     }
 
-    public function topic() {
+    public function topic() 
+    {
         return $this->belongsTo(Topic::class);
     }
 
