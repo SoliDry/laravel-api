@@ -3,11 +3,12 @@ namespace Modules\V1\Http\Middleware;
 
 use rjapi\extension\BaseFormRequest;
 
-class MyOhMyMiddleware extends BaseFormRequest 
+class CategoryTemplateMiddleware extends BaseFormRequest 
 {
     public $id = null;
     // Attributes
     public $title = null;
+    public $description = null;
 
     public function authorize(): bool 
     {
@@ -17,14 +18,17 @@ class MyOhMyMiddleware extends BaseFormRequest
     public function rules(): array 
     {
         return [
-            "title" => "string|required|min:3|max:255",
+            // TemplatesCategories title
+            "title" => "required|string|max:50",
+            // TemplatesCategories Description
+            "description" => "required|string",
         ];
     }
 
     public function relations(): array 
     {
         return [
-            "article",
+            "template",
         ];
     }
 

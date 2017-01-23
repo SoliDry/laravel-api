@@ -14,8 +14,8 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $middleware = [
-        \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
-        \App\Http\Middleware\ApiAccessToken::class,
+//        \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
+//        \App\Http\Middleware\ApiAccessToken::class,
     ];
 
     /**
@@ -54,5 +54,6 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+        'jwt' => \rjapi\extension\BaseJwt::class,
     ];
 }

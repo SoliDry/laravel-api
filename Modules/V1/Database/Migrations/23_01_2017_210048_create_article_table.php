@@ -9,9 +9,9 @@ class CreateArticleTable extends Migration
     {
         Schema::create('article', function(Blueprint $table) {
             $table->increments('id');
-            $table->string('title');
-            $table->string('description');
-            $table->string('url');
+            $table->string('title', 256);
+            $table->string('description', 1024);
+            $table->string('url', 255);
             // Show at the top of main page
             $table->unsignedTinyInteger('show_in_top');
             // ManyToOne Topic relationship
