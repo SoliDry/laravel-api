@@ -11,10 +11,10 @@ class CreateUserTable extends Migration
             $table->increments('id');
             $table->string('first_name', 256);
             $table->string('last_name', 256);
+            // user password to refresh JWT (encrypted with password_hash)
+            $table->string('password', 255);
             // Special field to run JWT Auth via requests
-            $table->string('jwt', 512);
-            // Needed to create JWT with secret
-            $table->string('uniqid', 13);
+            $table->string('jwt', 512)->default(' ');
             $table->timestamps();
         });
     }

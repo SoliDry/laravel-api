@@ -23,8 +23,8 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers']
 // Article routes
 Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers'], function()
 {
-    Route::get('/article', 'ArticleController@index');
-    Route::get('/article/{id}', 'ArticleController@view');
+    Route::get('/article', 'ArticleController@index')->middleware('jwt');
+    Route::get('/article/{id}', 'ArticleController@view')->middleware('jwt');;
     Route::post('/article', 'ArticleController@create');
     Route::patch('/article/{id}', 'ArticleController@update');
     Route::delete('/article/{id}', 'ArticleController@delete');
@@ -53,7 +53,7 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers']
 // User routes
 Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers'], function()
 {
-    Route::get('/user', 'UserController@index');
+    Route::get('/user', 'UserController@index')->middleware('jwt');
     Route::get('/user/{id}', 'UserController@view');
     Route::post('/user', 'UserController@create');
     Route::patch('/user/{id}', 'UserController@update');

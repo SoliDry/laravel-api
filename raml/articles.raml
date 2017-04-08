@@ -134,11 +134,16 @@ types:
         type: string
         minLength: 16
         maxLength: 256
+      password:
+        description: user password to refresh JWT (encrypted with password_hash)
+        required: true
+        type: string
+        maxLength: 255
       jwt:
         description: Special field to run JWT Auth via requests
         required: true
         type: string
-        minLength: 64
+        minLength: 256
         maxLength: 512
         default: ' '
   User:

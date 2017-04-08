@@ -10,7 +10,7 @@ class CreateTemplateTable extends Migration
         Schema::create('template', function(Blueprint $table) {
             $table->increments('id');
             // Category identifier  (connected to category table)
-            $table->integer('category_id');
+            $table->unsignedTinyInteger('category_id');
             // insert date to website
             // last time the template was updated
             // Template title
