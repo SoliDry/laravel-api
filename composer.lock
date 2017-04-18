@@ -2494,12 +2494,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RJAPI/raml-json-api.git",
-                "reference": "0616d070941f19c96ba4bfd105ab78f07834e51c"
+                "reference": "fb23223ac9f22574af10d877adaee5ed175ecc40"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RJAPI/raml-json-api/zipball/0616d070941f19c96ba4bfd105ab78f07834e51c",
-                "reference": "0616d070941f19c96ba4bfd105ab78f07834e51c",
+                "url": "https://api.github.com/repos/RJAPI/raml-json-api/zipball/fb23223ac9f22574af10d877adaee5ed175ecc40",
+                "reference": "fb23223ac9f22574af10d877adaee5ed175ecc40",
                 "shasum": ""
             },
             "require": {
@@ -2507,7 +2507,7 @@
                 "codeception/codeception": "^2.2",
                 "laravel/framework": "^5.3",
                 "lcobucci/jwt": "^3.2",
-                "league/fractal": "^0.14.0",
+                "league/fractal": ">=0.14",
                 "nwidart/laravel-modules": "^1.14",
                 "php": "^7.0"
             },
@@ -2518,13 +2518,12 @@
             "autoload": {
                 "psr-4": {
                     "rjapi\\": "src",
-                    "rjapitest\\": "tests",
-                    "Modules\\": "Modules/"
+                    "rjapitest\\": "tests"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
             "description": "RAML-JSON-API PHP-code generator (based on RAML-types) for Laravel framework, with complete support of JSON-API data format",
-            "time": "2017-01-29 10:58:09"
+            "time": "2017-04-18 19:25:07"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -4293,12 +4292,12 @@
             "version": "0.9.6",
             "source": {
                 "type": "git",
-                "url": "https://github.com/padraic/mockery.git",
+                "url": "https://github.com/mockery/mockery.git",
                 "reference": "65d4ca18e15cb02eeb1e5336f884e46b9b905be0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/padraic/mockery/zipball/65d4ca18e15cb02eeb1e5336f884e46b9b905be0",
+                "url": "https://api.github.com/repos/mockery/mockery/zipball/65d4ca18e15cb02eeb1e5336f884e46b9b905be0",
                 "reference": "65d4ca18e15cb02eeb1e5336f884e46b9b905be0",
                 "shasum": ""
             },

@@ -6,6 +6,9 @@ return [
         'sort' => 'desc',
         'access_token' => 'db7329d5a3f381875ea6ce7e28fe1ea536d0acaf',
     ],
+    'trees'=> [
+        'menu' => true,
+    ],
     'jwt'=> [
         'enabled' => true,
         'table' => 'user',

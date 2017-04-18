@@ -186,6 +186,33 @@ types:
         example: db7329d5a3f381875ea6ce7e28fe1ea536d0acaf
         description: sha1 example
         default: db7329d5a3f381875ea6ce7e28fe1ea536d0acaf
+  Trees:
+    type: object
+    properties:
+      menu:
+        type: boolean
+        default: true
+  MenuAttributes:
+    type: object
+    properties:
+      title:
+        required: true
+        type: string
+      rfc:
+        type: string
+        default: /
+      parent_id:
+        description: mandatory field for building trees
+        type: integer
+        minimum: 9
+        maximum: 10
+        default: 0
+  Menu:
+    type: object
+    properties:
+      type: Type
+      id: ID
+      attributes: MenuAttributes
 /article:
   get:
     queryParameters:
