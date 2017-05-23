@@ -15,4 +15,18 @@ return [
         'activate' => 30,
         'expires' => 3600,
     ],
+    'state_machine'=> [
+        'article'=> [
+            'status'=> [
+                'enabled'=>true,
+                'states'=> [
+                    'initial' => ['draft'],
+                    'draft' => ['published'],
+                    'published' => ['archived', 'postponed'],
+                    'postponed' => ['published', 'archived'],
+                    'archived' => [''],
+                ],
+            ],
+        ],
+    ],
 ];

@@ -67,6 +67,8 @@ types:
         type: string
         minLength: 16
         maxLength: 256
+        facets:
+          idx_title: index
       description:
         required: true
         type: string
@@ -77,6 +79,8 @@ types:
         type: string
         minLength: 16
         maxLength: 255
+        facets:
+          idx_url: unique
       show_in_top:
         description: Show at the top of main page
         required: false
@@ -84,12 +88,34 @@ types:
       status:
         description: The state of an article
         enum: ["draft", "published", "postponed", "archived"]
+        facets:
+          state_machine:
+            initial: ['draft']
+            draft: ['published']
+            published: ['archived', 'postponed']
+            postponed: ['published', 'archived']
+            archived: []
       topic_id:
         description: ManyToOne Topic relationship
         required: true
         type: integer
         minimum: 1
+        maximum: 6
+        facets:
+          idx_fk_topic_id: foreign
+          references: id
+          on: topic
+          onDelete: cascade
+          onUpdate: cascade
+      rate:
+        type: number
+        minimum: 3
         maximum: 9
+        format: double
+      date_posted:
+        type: date-only
+      time_to_live:
+        type: time-only
   Article:
     type: object
     properties:
