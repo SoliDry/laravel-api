@@ -1,6 +1,6 @@
 <?php
 return [
-    'name'=>'V1',
+    'name' => 'V1',
     'query_params'=> [
         'limit' => 15,
         'sort' => 'desc',
@@ -26,6 +26,27 @@ return [
                     'postponed' => ['published', 'archived'],
                     'archived' => [''],
                 ],
+            ],
+        ],
+    ],
+    'spell_check'=> [
+        'article'=> [
+            'description'=> [
+                'enabled'=>true,
+                'language' => 'en',
+            ],
+        ],
+    ],
+    'bit_mask'=> [
+        'user'=> [
+            'enabled' => true,
+            'hide_mask' => true,
+            'permissions'=> [
+                'publisher' => 1,
+                'editor' => 2,
+                'manager' => 4,
+                'photo_reporter' => 8,
+                'admin' => 16,
             ],
         ],
     ],

@@ -8,10 +8,11 @@ class CreateArticleTable extends Migration
     public function up() 
     {
         Schema::create('article', function(Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('title', 256);
             $table->index('title', 'idx_title');
             $table->string('description', 1024);
+            $table->index('description', 'spell_check');
             $table->string('url', 255);
             $table->unique('url', 'idx_url');
             // Show at the top of main page

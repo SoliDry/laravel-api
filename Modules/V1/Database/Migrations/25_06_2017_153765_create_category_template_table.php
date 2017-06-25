@@ -8,7 +8,7 @@ class CreateCategoryTemplateTable extends Migration
     public function up() 
     {
         Schema::create('category_template', function(Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             // TemplatesCategories title
             $table->string('title', 50);
             // TemplatesCategories Description

@@ -22,7 +22,7 @@ class MenuMiddleware extends BaseFormRequest
             "title" => "required|string",
             "rfc" => "string|",
             // mandatory field for building trees
-            "parent_id" => "integer|min:9|max:10|",
+            "parent_id" => "integer|max:10|",
         ];
     }
 

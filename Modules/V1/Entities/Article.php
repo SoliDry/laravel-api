@@ -14,9 +14,4 @@ class Article extends BaseModel
         return $this->belongsToMany(Tag::class, 'tag_article');
     }
 
-    public function topic() 
-    {
-        return $this->belongsTo(Topic::class);
-    }
-
 }

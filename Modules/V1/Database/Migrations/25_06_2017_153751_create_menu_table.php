@@ -8,7 +8,7 @@ class CreateMenuTable extends Migration
     public function up() 
     {
         Schema::create('menu', function(Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('title');
             $table->string('rfc')->default('/');
             // mandatory field for building trees

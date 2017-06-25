@@ -23,7 +23,7 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers']
 // Article routes
 Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers'], function()
 {
-    Route::get('/article', 'ArticleController@index')->middleware('jwt');
+    Route::get('/article', 'ArticleController@index');
     Route::get('/article/{id}', 'ArticleController@view');
     Route::post('/article', 'ArticleController@create');
     Route::patch('/article/{id}', 'ArticleController@update');
@@ -33,21 +33,6 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers']
     Route::post('/article/{id}/relationships/{relations}', 'ArticleController@createRelations');
     Route::patch('/article/{id}/relationships/{relations}', 'ArticleController@updateRelations');
     Route::delete('/article/{id}/relationships/{relations}', 'ArticleController@deleteRelations');
-});
-
-// Topic routes
-Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers'], function()
-{
-    Route::get('/topic', 'TopicController@index');
-    Route::get('/topic/{id}', 'TopicController@view');
-    Route::post('/topic', 'TopicController@create');
-    Route::patch('/topic/{id}', 'TopicController@update');
-    Route::delete('/topic/{id}', 'TopicController@delete');
-    // relation routes
-    Route::get('/topic/{id}/relationships/{relations}', 'TopicController@relations');
-    Route::post('/topic/{id}/relationships/{relations}', 'TopicController@createRelations');
-    Route::patch('/topic/{id}/relationships/{relations}', 'TopicController@updateRelations');
-    Route::delete('/topic/{id}/relationships/{relations}', 'TopicController@deleteRelations');
 });
 
 // User routes

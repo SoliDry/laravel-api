@@ -17,7 +17,7 @@ class TagMiddleware extends BaseFormRequest
     public function rules(): array 
     {
         return [
-            "title" => "string|required|min:3|max:255",
+            "title" => "string|required|min:3",
         ];
     }
 

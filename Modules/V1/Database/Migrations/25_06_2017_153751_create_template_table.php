@@ -8,7 +8,7 @@ class CreateTemplateTable extends Migration
     public function up() 
     {
         Schema::create('template', function(Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             // Category identifier  (connected to category table)
             $table->unsignedTinyInteger('category_id');
             // insert date to website
