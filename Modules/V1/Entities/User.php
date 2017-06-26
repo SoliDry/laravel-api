@@ -8,5 +8,4 @@ class User extends BaseModel
     protected $primaryKey = "id";
     protected $table = "user";
     public $timestamps = false;
-
 }

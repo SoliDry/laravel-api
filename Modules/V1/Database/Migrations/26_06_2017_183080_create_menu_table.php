@@ -11,7 +11,7 @@ class CreateMenuTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('rfc')->default('/');
-            // mandatory field for building trees
+                // mandatory field for building trees
             $table->unsignedInteger('parent_id');
             $table->timestamps();
         });

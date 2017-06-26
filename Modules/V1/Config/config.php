@@ -18,7 +18,7 @@ return [
     'state_machine'=> [
         'article'=> [
             'status'=> [
-                'enabled'=>true,
+                'enabled' => true,
                 'states'=> [
                     'initial' => ['draft'],
                     'draft' => ['published'],
@@ -32,21 +32,23 @@ return [
     'spell_check'=> [
         'article'=> [
             'description'=> [
-                'enabled'=>true,
+                'enabled' => true,
                 'language' => 'en',
             ],
         ],
     ],
     'bit_mask'=> [
         'user'=> [
-            'enabled' => true,
-            'hide_mask' => true,
             'permissions'=> [
-                'publisher' => 1,
-                'editor' => 2,
-                'manager' => 4,
-                'photo_reporter' => 8,
-                'admin' => 16,
+                'enabled' => true,
+                'hide_mask' => true,
+                'flags'=> [
+                    'publisher' => 1,
+                    'editor' => 2,
+                    'manager' => 4,
+                    'photo_reporter' => 8,
+                    'admin' => 16,
+                ],
             ],
         ],
     ],

@@ -9,27 +9,27 @@ class CreateTemplateTable extends Migration
     {
         Schema::create('template', function(Blueprint $table) {
             $table->bigIncrements('id');
-            // Category identifier  (connected to category table)
+                // Category identifier  (connected to category table)
             $table->unsignedTinyInteger('category_id');
-            // insert date to website
-            // last time the template was updated
-            // Template title
+                // insert date to website
+                // last time the template was updated
+                // Template title
             $table->string('title', 50);
-            // Template Description
+                // Template Description
             $table->string('description');
-            // Image (url) to show template
+                // Image (url) to show template
             $table->string('thumbnail_url');
-            // Video Demo of template
+                // Video Demo of template
             $table->string('example_vid_url');
-            // JSON data of Template
+                // JSON data of Template
             $table->string('template_json');
-            // Alpaca Forms - Schema data for form inputs (define input form to edit template)
+                // Alpaca Forms - Schema data for form inputs (define input form to edit template)
             $table->string('input_schema');
-            // Alpaca Forms - options data for form inputs (define input form to edit template)
+                // Alpaca Forms - options data for form inputs (define input form to edit template)
             $table->string('input_options');
-            // Alpaca Forms - data for form inputs (define input form to edit template)
+                // Alpaca Forms - data for form inputs (define input form to edit template)
             $table->string('input_data');
-            // Alpaca Forms - input data for form inputs (define input form to edit template)
+                // Alpaca Forms - input data for form inputs (define input form to edit template)
             $table->string('input_view');
             $table->timestamps();
         });

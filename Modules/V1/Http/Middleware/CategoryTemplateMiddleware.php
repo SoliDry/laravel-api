@@ -18,9 +18,9 @@ class CategoryTemplateMiddleware extends BaseFormRequest
     public function rules(): array 
     {
         return [
-            // TemplatesCategories title
+                // TemplatesCategories title
             "title" => "required|string|max:50",
-            // TemplatesCategories Description
+                // TemplatesCategories Description
             "description" => "required|string",
         ];
     }

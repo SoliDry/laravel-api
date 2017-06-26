@@ -30,29 +30,29 @@ class TemplateMiddleware extends BaseFormRequest
     public function rules(): array 
     {
         return [
-            // Category identifier  (connected to category table)
+                // Category identifier  (connected to category table)
             "category_id" => "required|integer",
-            // insert date to website
+                // insert date to website
             "created_at" => "required|",
-            // last time the template was updated
+                // last time the template was updated
             "updated_at" => "required|",
-            // Template title
+                // Template title
             "title" => "required|string|max:50",
-            // Template Description
+                // Template Description
             "description" => "required|string",
-            // Image (url) to show template
+                // Image (url) to show template
             "thumbnail_url" => "string|required",
-            // Video Demo of template
+                // Video Demo of template
             "example_vid_url" => "string|required",
-            // JSON data of Template
+                // JSON data of Template
             "template_json" => "string|required",
-            // Alpaca Forms - Schema data for form inputs (define input form to edit template)
+                // Alpaca Forms - Schema data for form inputs (define input form to edit template)
             "input_schema" => "string|required",
-            // Alpaca Forms - options data for form inputs (define input form to edit template)
+                // Alpaca Forms - options data for form inputs (define input form to edit template)
             "input_options" => "string|required",
-            // Alpaca Forms - data for form inputs (define input form to edit template)
+                // Alpaca Forms - data for form inputs (define input form to edit template)
             "input_data" => "string|required",
-            // Alpaca Forms - input data for form inputs (define input form to edit template)
+                // Alpaca Forms - input data for form inputs (define input form to edit template)
             "input_view" => "string|required",
         ];
     }

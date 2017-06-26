@@ -15,10 +15,10 @@ class CreateArticleTable extends Migration
             $table->index('description', 'spell_check');
             $table->string('url', 255);
             $table->unique('url', 'idx_url');
-            // Show at the top of main page
+                // Show at the top of main page
             $table->unsignedTinyInteger('show_in_top');
             $table->enum('status', ["draft","published","postponed","archived"]);
-            // ManyToOne Topic relationship
+                // ManyToOne Topic relationship
             $table->unsignedMediumInteger('topic_id');
             $table->foreign('topic_id', 'idx_fk_topic_id')->references('id')->on('topic')->onDelete('cascade')->onUpdate('cascade');
             $table->double('rate', 9, 3);

@@ -28,11 +28,11 @@ class ArticleMiddleware extends BaseFormRequest
             "title" => "required|string|min:16|max:256|",
             "description" => "required|string|min:32|max:1024|",
             "url" => "string|min:16|max:255|",
-            // Show at the top of main page
+                // Show at the top of main page
             "show_in_top" => "boolean",
-            // The state of an article
+                // The state of an article
             "status" => "in:draft,published,postponed,archived|",
-            // ManyToOne Topic relationship
+                // ManyToOne Topic relationship
             "topic_id" => "required|integer|min:1|max:6|",
             "rate" => "|min:3|max:9|",
             "date_posted" => "",
