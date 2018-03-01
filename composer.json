@@ -6,9 +6,9 @@
     "type": "project",
     "require": {
         "php": ">=7.0",
-        "laravel/framework": "5.3.*",
+        "laravel/framework": ">=5.3",
         "rjapi/raml-json-api": "dev-develop",
-        "nwidart/laravel-modules": "^1.14"
+        "nwidart/laravel-modules": "^3.0"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
