@@ -1,11 +1,6 @@
 <?php
-
-Route::group(['middleware' => 'web', 'prefix' => 'v1', 'namespace' => 'Modules\V1\Http\Controllers'], function()
-{
-    Route::get('/', 'V1Controller@index');
-});
-
-    // Tag routes
+// >>>routes>>>
+// Tag routes
 Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers'], function()
 {
     Route::get('/tag', 'TagController@index');
@@ -13,14 +8,16 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers']
     Route::post('/tag', 'TagController@create');
     Route::patch('/tag/{id}', 'TagController@update');
     Route::delete('/tag/{id}', 'TagController@delete');
-        // relation routes
+    // relation routes
     Route::get('/tag/{id}/relationships/{relations}', 'TagController@relations');
     Route::post('/tag/{id}/relationships/{relations}', 'TagController@createRelations');
     Route::patch('/tag/{id}/relationships/{relations}', 'TagController@updateRelations');
     Route::delete('/tag/{id}/relationships/{relations}', 'TagController@deleteRelations');
 });
+// <<<routes<<<
 
-    // Article routes
+// >>>routes>>>
+// Article routes
 Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers'], function()
 {
     Route::get('/article', 'ArticleController@index');
@@ -28,14 +25,16 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers']
     Route::post('/article', 'ArticleController@create');
     Route::patch('/article/{id}', 'ArticleController@update');
     Route::delete('/article/{id}', 'ArticleController@delete');
-        // relation routes
+    // relation routes
     Route::get('/article/{id}/relationships/{relations}', 'ArticleController@relations');
     Route::post('/article/{id}/relationships/{relations}', 'ArticleController@createRelations');
     Route::patch('/article/{id}/relationships/{relations}', 'ArticleController@updateRelations');
     Route::delete('/article/{id}/relationships/{relations}', 'ArticleController@deleteRelations');
 });
+// <<<routes<<<
 
-    // User routes
+// >>>routes>>>
+// User routes
 Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers'], function()
 {
     Route::get('/user', 'UserController@index');
@@ -43,14 +42,16 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers']
     Route::post('/user', 'UserController@create');
     Route::patch('/user/{id}', 'UserController@update');
     Route::delete('/user/{id}', 'UserController@delete');
-        // relation routes
+    // relation routes
     Route::get('/user/{id}/relationships/{relations}', 'UserController@relations');
     Route::post('/user/{id}/relationships/{relations}', 'UserController@createRelations');
     Route::patch('/user/{id}/relationships/{relations}', 'UserController@updateRelations');
     Route::delete('/user/{id}/relationships/{relations}', 'UserController@deleteRelations');
 });
+// <<<routes<<<
 
-    // Menu routes
+// >>>routes>>>
+// Menu routes
 Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers'], function()
 {
     Route::get('/menu', 'MenuController@index');
@@ -58,14 +59,16 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers']
     Route::post('/menu', 'MenuController@create');
     Route::patch('/menu/{id}', 'MenuController@update');
     Route::delete('/menu/{id}', 'MenuController@delete');
-        // relation routes
+    // relation routes
     Route::get('/menu/{id}/relationships/{relations}', 'MenuController@relations');
     Route::post('/menu/{id}/relationships/{relations}', 'MenuController@createRelations');
     Route::patch('/menu/{id}/relationships/{relations}', 'MenuController@updateRelations');
     Route::delete('/menu/{id}/relationships/{relations}', 'MenuController@deleteRelations');
 });
+// <<<routes<<<
 
-    // Template routes
+// >>>routes>>>
+// Template routes
 Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers'], function()
 {
     Route::get('/template', 'TemplateController@index');
@@ -73,14 +76,16 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers']
     Route::post('/template', 'TemplateController@create');
     Route::patch('/template/{id}', 'TemplateController@update');
     Route::delete('/template/{id}', 'TemplateController@delete');
-        // relation routes
+    // relation routes
     Route::get('/template/{id}/relationships/{relations}', 'TemplateController@relations');
     Route::post('/template/{id}/relationships/{relations}', 'TemplateController@createRelations');
     Route::patch('/template/{id}/relationships/{relations}', 'TemplateController@updateRelations');
     Route::delete('/template/{id}/relationships/{relations}', 'TemplateController@deleteRelations');
 });
+// <<<routes<<<
 
-    // CategoryTemplate routes
+// >>>routes>>>
+// CategoryTemplate routes
 Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers'], function()
 {
     Route::get('/category_template', 'CategoryTemplateController@index');
@@ -88,9 +93,10 @@ Route::group(['prefix' => 'v1', 'namespace' => 'Modules\\V1\\Http\\Controllers']
     Route::post('/category_template', 'CategoryTemplateController@create');
     Route::patch('/category_template/{id}', 'CategoryTemplateController@update');
     Route::delete('/category_template/{id}', 'CategoryTemplateController@delete');
-        // relation routes
+    // relation routes
     Route::get('/category_template/{id}/relationships/{relations}', 'CategoryTemplateController@relations');
     Route::post('/category_template/{id}/relationships/{relations}', 'CategoryTemplateController@createRelations');
     Route::patch('/category_template/{id}/relationships/{relations}', 'CategoryTemplateController@updateRelations');
     Route::delete('/category_template/{id}/relationships/{relations}', 'CategoryTemplateController@deleteRelations');
 });
+// <<<routes<<<

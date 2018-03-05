@@ -2187,6 +2187,56 @@
             "time": "2017-06-30T09:13:00+00:00"
         },
         {
+            "name": "predis/predis",
+            "version": "v1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nrk/predis.git",
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.9"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8"
+            },
+            "suggest": {
+                "ext-curl": "Allows access to Webdis when paired with phpiredis",
+                "ext-phpiredis": "Allows faster serialization and deserialization of the Redis protocol"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Predis\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Daniele Alessandri",
+                    "email": "suppakilla@gmail.com",
+                    "homepage": "http://clorophilla.net"
+                }
+            ],
+            "description": "Flexible and feature-complete Redis client for PHP and HHVM",
+            "homepage": "http://github.com/nrk/predis",
+            "keywords": [
+                "nosql",
+                "predis",
+                "redis"
+            ],
+            "time": "2016-06-16T16:22:20+00:00"
+        },
+        {
             "name": "psr/container",
             "version": "1.0.0",
             "source": {
@@ -2466,12 +2516,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RJAPI/raml-json-api.git",
-                "reference": "7423204a03ba372e9f7e8bf446c0b73659da9f03"
+                "reference": "186bf9e17d554b7fb81af82b62364c8cb05b883b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RJAPI/raml-json-api/zipball/7423204a03ba372e9f7e8bf446c0b73659da9f03",
-                "reference": "7423204a03ba372e9f7e8bf446c0b73659da9f03",
+                "url": "https://api.github.com/repos/RJAPI/raml-json-api/zipball/186bf9e17d554b7fb81af82b62364c8cb05b883b",
+                "reference": "186bf9e17d554b7fb81af82b62364c8cb05b883b",
                 "shasum": ""
             },
             "require": {
@@ -2481,10 +2531,12 @@
                 "lcobucci/jwt": "^3.2",
                 "league/fractal": ">=0.14",
                 "nwidart/laravel-modules": "^3.0",
-                "php": "^7.1"
+                "php": "^7.1",
+                "predis/predis": "^1.1"
             },
             "require-dev": {
-                "mockery/mockery": "^0.9.7"
+                "mockery/mockery": "~1.0",
+                "phpunit/phpunit": ">=6.5"
             },
             "type": "rjapi-raml",
             "autoload": {
@@ -2497,8 +2549,15 @@
             "license": [
                 "MIT"
             ],
+            "authors": [
+                {
+                    "name": "Arthur Kushman",
+                    "email": "arthurkushman@gmail.com",
+                    "role": "Developer"
+                }
+            ],
             "description": "RAML-JSON-API PHP-code generator (based on RAML-types) for Laravel framework, with complete support of JSON-API data format",
-            "time": "2018-03-01T18:56:02+00:00"
+            "time": "2018-03-04T14:47:13+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

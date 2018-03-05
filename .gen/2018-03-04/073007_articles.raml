@@ -27,23 +27,6 @@ types:
     properties:
       id: ID
       type: Type
-  Redis:
-    type: object
-    properties:
-      host:
-        type: string
-        required: true
-        default: '127.0.0.1'
-      port:
-        type: integer
-        required: true
-        minimum: 6379
-        maximum: 65535
-        default: 6379
-      database:
-        type: integer
-        required: false
-        default: 0
   TagRelationships:
     description: Tag relationship description
     type: object
@@ -144,7 +127,6 @@ types:
       attributes: ArticleAttributes
       relationships:
         type: TagRelationships[] | TopicRelationships
-      cache: Redis
   TopicRelationships:
     type: object
     properties:

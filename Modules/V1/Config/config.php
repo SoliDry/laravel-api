@@ -41,7 +41,6 @@ return [
         'user'=> [
             'permissions'=> [
                 'enabled' => true,
-                'hide_mask' => true,
                 'flags'=> [
                     'publisher' => 1,
                     'editor' => 2,
@@ -50,6 +49,14 @@ return [
                     'admin' => 16,
                 ],
             ],
+        ],
+    ],
+    'cache'=> [
+        'article'=> [
+            'enabled' => true,
+            'host' => '127.0.0.1',
+            'port' => 6379,
+            'database' => 0,
         ],
     ],
 ];
