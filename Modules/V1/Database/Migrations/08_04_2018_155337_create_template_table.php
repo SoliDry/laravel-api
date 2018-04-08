@@ -11,8 +11,6 @@ class CreateTemplateTable extends Migration
             $table->bigIncrements('id');
                 // Category identifier  (connected to category table)
             $table->unsignedTinyInteger('category_id');
-                // insert date to website
-                // last time the template was updated
                 // Template title
             $table->string('title', 50);
                 // Template Description

@@ -5,6 +5,7 @@ use rjapi\extension\BaseFormRequest;
 
 class ArticleMiddleware extends BaseFormRequest 
 {
+    // >>>props>>>
     public $id = null;
     // Attributes
     public $title = null;
@@ -16,7 +17,10 @@ class ArticleMiddleware extends BaseFormRequest
     public $rate = null;
     public $date_posted = null;
     public $time_to_live = null;
+    public $deleted_at = null;
+    // <<<props<<<
 
+    // >>>methods>>>
     public function authorize(): bool 
     {
         return true;
@@ -25,27 +29,28 @@ class ArticleMiddleware extends BaseFormRequest
     public function rules(): array 
     {
         return [
-            "title" => "required|string|min:16|max:256|",
-            "description" => "required|string|min:32|max:1024|",
-            "url" => "string|min:16|max:255|",
+            'title' => 'required|string|min:16|max:256|',
+            'description' => 'required|string|min:32|max:1024|',
+            'url' => 'string|min:16|max:255|',
                 // Show at the top of main page
-            "show_in_top" => "boolean",
+            'show_in_top' => 'boolean',
                 // The state of an article
-            "status" => "in:draft,published,postponed,archived|",
+            'status' => 'in:draft,published,postponed,archived|',
                 // ManyToOne Topic relationship
-            "topic_id" => "required|integer|min:1|max:6|",
-            "rate" => "|min:3|max:9|",
-            "date_posted" => "",
-            "time_to_live" => "",
+            'topic_id' => 'required|integer|min:1|max:6|',
+            'rate' => '|min:3|max:9|',
+            'date_posted' => '',
+            'time_to_live' => '',
+            'deleted_at' => '',
         ];
     }
 
     public function relations(): array 
     {
         return [
-            "tag",
-            "topic",
+            'tag',
+            'topic',
         ];
     }
-
+    // <<<methods<<<
 }

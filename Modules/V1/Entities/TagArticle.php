@@ -5,7 +5,9 @@ use rjapi\extension\BaseModel;
 
 class TagArticle extends BaseModel 
 {
-    protected $primaryKey = "id";
-    protected $table = "tag_article";
+    // >>>props>>>
+    protected $primaryKey = 'id';
+    protected $table = 'tag_article';
     public $timestamps = true;
+    // <<<props<<<
 }

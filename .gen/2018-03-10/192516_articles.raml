@@ -11,10 +11,6 @@ types:
     type: integer
     required: true
     maximum: 20
-  SID:
-    type: string
-    required: true
-    maxLength: 128
   Type:
     type: string
     required: true
@@ -33,6 +29,21 @@ types:
       type: Type
   Redis:
     type: object
+    properties:
+      host:
+        type: string
+        required: true
+        default: '127.0.0.1'
+      port:
+        type: integer
+        required: true
+        minimum: 6379
+        maximum: 65535
+        default: 6379
+      database:
+        type: integer
+        required: false
+        default: 0
   TagRelationships:
     description: Tag relationship description
     type: object
@@ -131,7 +142,7 @@ types:
     type: object
     properties:
       type: Type
-      id: SID
+      id: ID
       attributes: ArticleAttributes
       relationships:
         type: TagRelationships[] | TopicRelationships

@@ -3,6 +3,7 @@
 namespace Modules\V1\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Database\Eloquent\Factory;
 
 class V1ServiceProvider extends ServiceProvider
 {
@@ -23,6 +24,8 @@ class V1ServiceProvider extends ServiceProvider
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerViews();
+        $this->registerFactories();
+        $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
     }
 
     /**
@@ -44,7 +47,7 @@ class V1ServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../Config/config.php' => config_path('v1.php'),
-        ]);
+        ], 'config');
         $this->mergeConfigFrom(
             __DIR__.'/../Config/config.php', 'v1'
         );
@@ -57,7 +60,7 @@ class V1ServiceProvider extends ServiceProvider
      */
     public function registerViews()
     {
-        $viewPath = base_path('resources/views/modules/v1');
+        $viewPath = resource_path('views/modules/v1');
 
         $sourcePath = __DIR__.'/../Resources/views';
 
@@ -77,12 +80,23 @@ class V1ServiceProvider extends ServiceProvider
      */
     public function registerTranslations()
     {
-        $langPath = base_path('resources/lang/modules/v1');
+        $langPath = resource_path('lang/modules/v1');
 
         if (is_dir($langPath)) {
             $this->loadTranslationsFrom($langPath, 'v1');
         } else {
             $this->loadTranslationsFrom(__DIR__ .'/../Resources/lang', 'v1');
+        }
+    }
+
+    /**
+     * Register an additional directory of factories.
+     * @source https://github.com/sebastiaanluca/laravel-resource-flow/blob/develop/src/Modules/ModuleServiceProvider.php#L66
+     */
+    public function registerFactories()
+    {
+        if (! app()->environment('production')) {
+            app(Factory::class)->load(__DIR__ . '/../Database/factories');
         }
     }
 

@@ -5,12 +5,15 @@ use rjapi\extension\BaseFormRequest;
 
 class MenuMiddleware extends BaseFormRequest 
 {
+    // >>>props>>>
     public $id = null;
     // Attributes
     public $title = null;
     public $rfc = null;
     public $parent_id = null;
+    // <<<props<<<
 
+    // >>>methods>>>
     public function authorize(): bool 
     {
         return true;
@@ -19,10 +22,10 @@ class MenuMiddleware extends BaseFormRequest
     public function rules(): array 
     {
         return [
-            "title" => "required|string",
-            "rfc" => "string|",
+            'title' => 'required|string',
+            'rfc' => 'string|',
                 // mandatory field for building trees
-            "parent_id" => "integer|max:10|",
+            'parent_id' => 'integer|max:10|',
         ];
     }
 
@@ -32,5 +35,5 @@ class MenuMiddleware extends BaseFormRequest
 
         ];
     }
-
+    // <<<methods<<<
 }

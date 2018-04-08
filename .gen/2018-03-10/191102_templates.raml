@@ -40,6 +40,14 @@ types:
         description: Category identifier  (connected to category table)
         required: true
         type: integer
+      created_at:
+        description: insert date to website
+        required: true
+        type: datetime
+      updated_at:
+         description: last time the template was updated
+         required: true
+         type: datetime
       title:
         description: Template title
         required: true
@@ -77,6 +85,7 @@ types:
         description: Alpaca Forms - input data for form inputs (define input form to edit template)
         type: string
         required: true
+
   Template:
     type: object
     properties:
@@ -85,6 +94,7 @@ types:
       attributes: TemplateAttributes
       relationships:
         type: Category_templateRelationships
+
   Category_templateRelationships:
     type: object
     properties:
@@ -92,6 +102,7 @@ types:
         type: DataArray
         items:
           type: RelationshipsDataItem
+
   Category_templateAttributes:
     description: TemplatesCategories attributes description
     type: object
@@ -105,6 +116,7 @@ types:
         description: TemplatesCategories Description
         required: true
         type: string
+
   Category_template:
     type: object
     properties:
@@ -113,6 +125,7 @@ types:
       attributes: Category_templateAttributes
       relationships:
         type: TemplateRelationships[]
+
 /templates:
   get:
     queryParameters:

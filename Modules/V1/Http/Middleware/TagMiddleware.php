@@ -5,10 +5,13 @@ use rjapi\extension\BaseFormRequest;
 
 class TagMiddleware extends BaseFormRequest 
 {
+    // >>>props>>>
     public $id = null;
     // Attributes
     public $title = null;
+    // <<<props<<<
 
+    // >>>methods>>>
     public function authorize(): bool 
     {
         return true;
@@ -17,15 +20,15 @@ class TagMiddleware extends BaseFormRequest
     public function rules(): array 
     {
         return [
-            "title" => "string|required|min:3",
+            'title' => 'string|required|min:3',
         ];
     }
 
     public function relations(): array 
     {
         return [
-            "article",
+            'article',
         ];
     }
-
+    // <<<methods<<<
 }

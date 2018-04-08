@@ -1,11 +1,17 @@
 <?php
 namespace Modules\V1\Entities;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
 use rjapi\extension\BaseModel;
 
 class User extends BaseModel 
 {
-    protected $primaryKey = "id";
-    protected $table = "user";
+    // >>>props>>>
+    protected $primaryKey = 'id';
+    protected $table = 'user';
     public $timestamps = false;
+    // <<<props<<<
+    // >>>methods>>>
+
+    // <<<methods<<<
 }

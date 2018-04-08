@@ -5,11 +5,14 @@ use rjapi\extension\BaseFormRequest;
 
 class CategoryTemplateMiddleware extends BaseFormRequest 
 {
+    // >>>props>>>
     public $id = null;
     // Attributes
     public $title = null;
     public $description = null;
+    // <<<props<<<
 
+    // >>>methods>>>
     public function authorize(): bool 
     {
         return true;
@@ -19,17 +22,17 @@ class CategoryTemplateMiddleware extends BaseFormRequest
     {
         return [
                 // TemplatesCategories title
-            "title" => "required|string|max:50",
+            'title' => 'required|string|max:50',
                 // TemplatesCategories Description
-            "description" => "required|string",
+            'description' => 'required|string',
         ];
     }
 
     public function relations(): array 
     {
         return [
-            "template",
+            'template',
         ];
     }
-
+    // <<<methods<<<
 }

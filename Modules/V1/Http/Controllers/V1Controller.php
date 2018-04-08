@@ -36,6 +36,15 @@ class V1Controller extends Controller
     }
 
     /**
+     * Show the specified resource.
+     * @return Response
+     */
+    public function show()
+    {
+        return view('v1::show');
+    }
+
+    /**
      * Show the form for editing the specified resource.
      * @return Response
      */

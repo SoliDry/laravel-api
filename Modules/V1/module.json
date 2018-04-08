@@ -8,8 +8,9 @@
     "providers": [
         "Modules\\V1\\Providers\\V1ServiceProvider"
     ],
-    "aliases":{},
+    "aliases": {},
     "files": [
         "start.php"
-    ]
+    ],
+    "requires": []
 }

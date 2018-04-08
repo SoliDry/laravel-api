@@ -7,8 +7,7 @@
     "require": {
         "php": ">=7.0",
         "laravel/framework": ">=5.3",
-        "rjapi/raml-json-api": "dev-develop",
-        "nwidart/laravel-modules": "^3.0"
+        "rjapi/raml-json-api": "dev-string_ids"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -50,5 +49,7 @@
     },
     "config": {
         "preferred-install": "dist"
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
