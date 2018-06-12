@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f65d5f6859dc937bf318a5fa8dd1c51c",
+    "content-hash": "302b72501cc8a62bf7bf12bb8739f226",
     "packages": [
         {
             "name": "alecsammon/php-raml-parser",
@@ -51,6 +51,7 @@
             ],
             "description": "A RAML parser built in php",
             "homepage": "https://github.com/alecsammon/php-raml-parser",
+            "abandoned": "raml-org/raml-php-parser",
             "time": "2016-11-22T07:52:53+00:00"
         },
         {
@@ -2563,16 +2564,16 @@
         },
         {
             "name": "rjapi/raml-json-api",
-            "version": "dev-string_ids",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/RJAPI/raml-json-api.git",
-                "reference": "687dee79f1646b766e6f0411efa1f41c727b8114"
+                "reference": "e73ffc14d250ab3c87a3e483a9d375108bf023b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RJAPI/raml-json-api/zipball/687dee79f1646b766e6f0411efa1f41c727b8114",
-                "reference": "687dee79f1646b766e6f0411efa1f41c727b8114",
+                "url": "https://api.github.com/repos/RJAPI/raml-json-api/zipball/e73ffc14d250ab3c87a3e483a9d375108bf023b2",
+                "reference": "e73ffc14d250ab3c87a3e483a9d375108bf023b2",
                 "shasum": ""
             },
             "require": {
@@ -2609,7 +2610,7 @@
                 }
             ],
             "description": "RAML-JSON-API PHP-code generator (based on RAML-types) for Laravel framework, with complete support of JSON-API data format",
-            "time": "2018-04-08T14:09:30+00:00"
+            "time": "2018-05-13T07:06:20+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

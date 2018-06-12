@@ -31,7 +31,7 @@ class UserMiddleware extends BaseFormRequest
     {
         return [
             'first_name' => 'required|string|min:16|max:256',
-            'last_name' => 'string|min:16|max:256',
+            'last_name' => 'string|min:16|max:256|',
                 // user password to refresh JWT (encrypted with password_hash)
             'password' => 'required|string|max:255',
                 // Special field to run JWT Auth via requests
