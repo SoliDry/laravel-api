@@ -1447,12 +1447,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/RJAPI/raml-json-api.git",
-                "reference": "0652fcf4010780bab70b02eb92856414cda5110c"
+                "reference": "ad50c2f7f7d575223d2940fa17d3456a38991580"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RJAPI/raml-json-api/zipball/0652fcf4010780bab70b02eb92856414cda5110c",
-                "reference": "0652fcf4010780bab70b02eb92856414cda5110c",
+                "url": "https://api.github.com/repos/RJAPI/raml-json-api/zipball/ad50c2f7f7d575223d2940fa17d3456a38991580",
+                "reference": "ad50c2f7f7d575223d2940fa17d3456a38991580",
                 "shasum": ""
             },
             "require": {
@@ -1489,7 +1489,7 @@
                 }
             ],
             "description": "RAML-JSON-API PHP-code generator (based on RAML-types) for Laravel framework, with complete support of JSON-API data format",
-            "time": "2018-08-05T10:23:59+00:00"
+            "time": "2018-08-18T14:57:03+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
