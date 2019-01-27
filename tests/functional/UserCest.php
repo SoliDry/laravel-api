@@ -13,7 +13,7 @@ class UserCest
     public function tryUserCreate(FunctionalTester $I) 
     {
         $I->amGoingTo('test User create');
-        $I->sendPOST('/v1/user', '{"data":{"type":"user","attributes":{"first_name":"ezequiel.ledner","last_name":"mschowalter","password":"manuela55","jwt":"clark.farrell","permissions":9}}}');
+        $I->sendPOST('/v1/user', '{"data":{"type":"user","attributes":{"first_name":"vaughn77","last_name":"camille66","password":"yanderson","jwt":"sabina.schaefer","permissions":0}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -22,9 +22,9 @@ class UserCest
     'id' => 1,
     'attributes' => 
     array (
-      'first_name' => 'ezequiel.ledner',
-      'password' => 'manuela55',
-      'jwt' => 'clark.farrell',
+      'first_name' => 'vaughn77',
+      'password' => 'yanderson',
+      'jwt' => 'sabina.schaefer',
     ),
   ),
 ));
@@ -42,9 +42,9 @@ class UserCest
     'id' => 1,
     'attributes' => 
     array (
-      'first_name' => 'ezequiel.ledner',
-      'password' => 'manuela55',
-      'jwt' => 'clark.farrell',
+      'first_name' => 'vaughn77',
+      'password' => 'yanderson',
+      'jwt' => 'sabina.schaefer',
     ),
   ),
 ));
@@ -62,9 +62,9 @@ class UserCest
     'id' => 1,
     'attributes' => 
     array (
-      'first_name' => 'ezequiel.ledner',
-      'password' => 'manuela55',
-      'jwt' => 'clark.farrell',
+      'first_name' => 'vaughn77',
+      'password' => 'yanderson',
+      'jwt' => 'sabina.schaefer',
     ),
   ),
 ));
@@ -73,7 +73,7 @@ class UserCest
     public function tryUserUpdate(FunctionalTester $I) 
     {
         $I->amGoingTo('test User update');
-        $I->sendPATCH('/v1/user/1', '{"data":{"type":"user","attributes":{"first_name":"ezequiel.ledner","last_name":"mschowalter","password":"manuela55","jwt":"clark.farrell","permissions":9}}}');
+        $I->sendPATCH('/v1/user/1', '{"data":{"type":"user","attributes":{"first_name":"vaughn77","last_name":"camille66","password":"yanderson","jwt":"sabina.schaefer","permissions":0}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -82,9 +82,9 @@ class UserCest
     'id' => 1,
     'attributes' => 
     array (
-      'first_name' => 'ezequiel.ledner',
-      'password' => 'manuela55',
-      'jwt' => 'clark.farrell',
+      'first_name' => 'vaughn77',
+      'password' => 'yanderson',
+      'jwt' => 'sabina.schaefer',
     ),
   ),
 ));

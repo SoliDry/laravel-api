@@ -1,9 +1,9 @@
 <?php
-namespace Modules\V1\Http\Middleware;
+namespace Modules\V1\Http\Requests;
 
 use rjapi\extension\BaseFormRequest;
 
-class CategoryTemplateMiddleware extends BaseFormRequest 
+class CategoryTemplateFormRequest extends BaseFormRequest 
 {
     // >>>props>>>
     public $id = null;

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e9024e0a3edb6dac91ed2b6fc9e10e09",
+    "content-hash": "cf5798fc31a845377cc309c2a6dc3f20",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -349,23 +349,23 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "5.2.7",
+            "version": "5.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/justinrainbow/json-schema.git",
-                "reference": "8560d4314577199ba51bf2032f02cd1315587c23"
+                "reference": "dcb6e1006bb5fd1e392b4daa68932880f37550d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/8560d4314577199ba51bf2032f02cd1315587c23",
-                "reference": "8560d4314577199ba51bf2032f02cd1315587c23",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/dcb6e1006bb5fd1e392b4daa68932880f37550d4",
+                "reference": "dcb6e1006bb5fd1e392b4daa68932880f37550d4",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.1",
+                "friendsofphp/php-cs-fixer": "~2.2.20",
                 "json-schema/json-schema-test-suite": "1.2.0",
                 "phpunit/phpunit": "^4.8.35"
             },
@@ -411,7 +411,7 @@
                 "json",
                 "schema"
             ],
-            "time": "2018-02-14T22:26:30+00:00"
+            "time": "2019-01-14T23:55:14+00:00"
         },
         {
             "name": "laravel/framework",
@@ -554,16 +554,16 @@
         },
         {
             "name": "lcobucci/jwt",
-            "version": "3.2.4",
+            "version": "3.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lcobucci/jwt.git",
-                "reference": "c9704b751315d21735dc98d78d4f37bd73596da7"
+                "reference": "82be04b4753f8b7693b62852b7eab30f97524f9b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/c9704b751315d21735dc98d78d4f37bd73596da7",
-                "reference": "c9704b751315d21735dc98d78d4f37bd73596da7",
+                "url": "https://api.github.com/repos/lcobucci/jwt/zipball/82be04b4753f8b7693b62852b7eab30f97524f9b",
+                "reference": "82be04b4753f8b7693b62852b7eab30f97524f9b",
                 "shasum": ""
             },
             "require": {
@@ -608,7 +608,7 @@
                 "JWS",
                 "jwt"
             ],
-            "time": "2018-08-03T11:23:50+00:00"
+            "time": "2018-11-11T12:22:26+00:00"
         },
         {
             "name": "league/flysystem",
@@ -1299,27 +1299,28 @@
         },
         {
             "name": "raml-org/raml-php-parser",
-            "version": "4.2.0",
+            "version": "v4.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/raml-org/raml-php-parser.git",
-                "reference": "d358dfeb8f2bd9351b6c43c746ddc90eefda177b"
+                "reference": "4359e8cb29e815e13686bb798fa2f023ea5266d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/raml-org/raml-php-parser/zipball/d358dfeb8f2bd9351b6c43c746ddc90eefda177b",
-                "reference": "d358dfeb8f2bd9351b6c43c746ddc90eefda177b",
+                "url": "https://api.github.com/repos/raml-org/raml-php-parser/zipball/4359e8cb29e815e13686bb798fa2f023ea5266d8",
+                "reference": "4359e8cb29e815e13686bb798fa2f023ea5266d8",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
+                "ext-json": "*",
                 "ext-pcre": "*",
-                "justinrainbow/json-schema": "~5.0",
-                "oodle/inflect": "~0.2",
-                "php": ">=5.5.9",
+                "justinrainbow/json-schema": "^5.0",
+                "oodle/inflect": "^0.2",
+                "php": "^5.6|^7.0",
                 "psr/http-message": "^1.0",
-                "symfony/routing": "~3.0|~4.0",
-                "symfony/yaml": "~3.0|~4.0",
+                "symfony/routing": "^3.0|^4.0",
+                "symfony/yaml": "^3.0|^4.0",
                 "willdurand/negotiation": "^2.2.1"
             },
             "replace": {
@@ -1328,9 +1329,9 @@
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "*",
                 "jakub-onderka/php-parallel-lint": "^1.0",
+                "php-coveralls/php-coveralls": "^2.1",
                 "phpstan/phpstan": "^0.10.2",
-                "phpunit/phpunit": "4.*",
-                "satooshi/php-coveralls": "~2.0",
+                "phpunit/phpunit": "^5.7",
                 "sensiolabs/security-checker": "^4.1"
             },
             "type": "library",
@@ -1347,17 +1348,22 @@
                 {
                     "name": "Alec Sammon",
                     "email": "alec.sammon@googlemail.com",
-                    "role": "Developer"
+                    "role": "Original Author"
                 },
                 {
                     "name": "eLama Team",
                     "email": "dev@elama.ru",
-                    "role": "Developer"
+                    "role": "Main Contributor"
+                },
+                {
+                    "name": "Martin Georgiev",
+                    "email": "martin.georgiev@gmail.com",
+                    "role": "Maintainer"
                 }
             ],
             "description": "A RAML parser built in php",
             "homepage": "https://github.com/raml-org/raml-php-parser",
-            "time": "2018-07-25T14:07:50+00:00"
+            "time": "2019-01-01T11:50:55+00:00"
         },
         {
             "name": "ramsey/uuid",
@@ -1442,17 +1448,17 @@
             "time": "2018-07-19T23:38:55+00:00"
         },
         {
-            "name": "rjapi/raml-json-api",
+            "name": "rjapi/api-generator",
             "version": "dev-develop",
             "source": {
                 "type": "git",
-                "url": "https://github.com/RJAPI/raml-json-api.git",
-                "reference": "ad50c2f7f7d575223d2940fa17d3456a38991580"
+                "url": "https://github.com/RJAPI/api-generator.git",
+                "reference": "33b39b1ff11d02adb2fe438e08af2873790c4af1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/RJAPI/raml-json-api/zipball/ad50c2f7f7d575223d2940fa17d3456a38991580",
-                "reference": "ad50c2f7f7d575223d2940fa17d3456a38991580",
+                "url": "https://api.github.com/repos/RJAPI/api-generator/zipball/33b39b1ff11d02adb2fe438e08af2873790c4af1",
+                "reference": "33b39b1ff11d02adb2fe438e08af2873790c4af1",
                 "shasum": ""
             },
             "require": {
@@ -1470,7 +1476,7 @@
                 "php": "^7.1",
                 "phpunit/phpunit": ">=6.5"
             },
-            "type": "rjapi-raml",
+            "type": "api-generator",
             "autoload": {
                 "psr-4": {
                     "rjapi\\": "src",
@@ -1488,8 +1494,8 @@
                     "role": "Developer"
                 }
             ],
-            "description": "RAML-JSON-API PHP-code generator (based on RAML-types) for Laravel framework, with complete support of JSON-API data format",
-            "time": "2018-08-18T14:57:03+00:00"
+            "description": "PHP-code generator (based on OAS) for Laravel framework, with complete support of JSON-API data format",
+            "time": "2019-01-26T15:36:28+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -1982,7 +1988,7 @@
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.9.0",
+            "version": "v1.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
@@ -2025,7 +2031,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "BackEndTea@gmail.com"
+                    "email": "backendtea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -2203,30 +2209,30 @@
         },
         {
             "name": "symfony/routing",
-            "version": "v4.1.3",
+            "version": "v4.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/routing.git",
-                "reference": "6912cfebc0ea4e7a46fdd15c9bd1f427dd39ff1b"
+                "reference": "e69b7a13a0b58af378a49b49dd7084462de16cee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/routing/zipball/6912cfebc0ea4e7a46fdd15c9bd1f427dd39ff1b",
-                "reference": "6912cfebc0ea4e7a46fdd15c9bd1f427dd39ff1b",
+                "url": "https://api.github.com/repos/symfony/routing/zipball/e69b7a13a0b58af378a49b49dd7084462de16cee",
+                "reference": "e69b7a13a0b58af378a49b49dd7084462de16cee",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.1.3"
             },
             "conflict": {
-                "symfony/config": "<3.4",
+                "symfony/config": "<4.2",
                 "symfony/dependency-injection": "<3.4",
                 "symfony/yaml": "<3.4"
             },
             "require-dev": {
                 "doctrine/annotations": "~1.0",
                 "psr/log": "~1.0",
-                "symfony/config": "~3.4|~4.0",
+                "symfony/config": "~4.2",
                 "symfony/dependency-injection": "~3.4|~4.0",
                 "symfony/expression-language": "~3.4|~4.0",
                 "symfony/http-foundation": "~3.4|~4.0",
@@ -2243,7 +2249,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -2276,7 +2282,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2018-07-26T11:24:31+00:00"
+            "time": "2019-01-03T09:07:35+00:00"
         },
         {
             "name": "symfony/translation",
@@ -2424,16 +2430,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.1.3",
+            "version": "v4.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "46bc69aa91fc4ab78a96ce67873a6b0c148fd48c"
+                "reference": "d0aa6c0ea484087927b49fd513383a7d36190ca6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/46bc69aa91fc4ab78a96ce67873a6b0c148fd48c",
-                "reference": "46bc69aa91fc4ab78a96ce67873a6b0c148fd48c",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/d0aa6c0ea484087927b49fd513383a7d36190ca6",
+                "reference": "d0aa6c0ea484087927b49fd513383a7d36190ca6",
                 "shasum": ""
             },
             "require": {
@@ -2452,7 +2458,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "4.1-dev"
+                    "dev-master": "4.2-dev"
                 }
             },
             "autoload": {
@@ -2479,7 +2485,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2018-07-26T11:24:31+00:00"
+            "time": "2019-01-03T09:07:35+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -4693,7 +4699,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "rjapi/raml-json-api": 20
+        "rjapi/api-generator": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

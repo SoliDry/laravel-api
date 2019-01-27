@@ -13,7 +13,6 @@ class Article extends BaseModel
     protected $primaryKey = 'id';
     protected $table = 'article';
     public $timestamps = false;
-    public $incrementing = false;
     // <<<props<<<
     // >>>methods>>>
 

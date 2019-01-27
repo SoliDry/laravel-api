@@ -13,7 +13,7 @@ class CategoryTemplateCest
     public function tryCategory_templateCreate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Category_template create');
-        $I->sendPOST('/v1/category_template', '{"data":{"type":"category_template","attributes":{"title":"shannon.renner","description":"mallie.stamm"}}}');
+        $I->sendPOST('/v1/category_template', '{"data":{"type":"category_template","attributes":{"title":"ybradtke","description":"willms.marcelo"}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -22,8 +22,8 @@ class CategoryTemplateCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'shannon.renner',
-      'description' => 'mallie.stamm',
+      'title' => 'ybradtke',
+      'description' => 'willms.marcelo',
     ),
   ),
 ));
@@ -41,8 +41,8 @@ class CategoryTemplateCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'shannon.renner',
-      'description' => 'mallie.stamm',
+      'title' => 'ybradtke',
+      'description' => 'willms.marcelo',
     ),
   ),
 ));
@@ -60,8 +60,8 @@ class CategoryTemplateCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'shannon.renner',
-      'description' => 'mallie.stamm',
+      'title' => 'ybradtke',
+      'description' => 'willms.marcelo',
     ),
   ),
 ));
@@ -70,7 +70,7 @@ class CategoryTemplateCest
     public function tryCategory_templateUpdate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Category_template update');
-        $I->sendPATCH('/v1/category_template/1', '{"data":{"type":"category_template","attributes":{"title":"shannon.renner","description":"mallie.stamm"}}}');
+        $I->sendPATCH('/v1/category_template/1', '{"data":{"type":"category_template","attributes":{"title":"ybradtke","description":"willms.marcelo"}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -79,8 +79,8 @@ class CategoryTemplateCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'shannon.renner',
-      'description' => 'mallie.stamm',
+      'title' => 'ybradtke',
+      'description' => 'willms.marcelo',
     ),
   ),
 ));

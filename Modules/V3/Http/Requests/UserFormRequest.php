@@ -1,18 +1,18 @@
 <?php
-namespace Modules\V1\Http\Middleware;
+namespace Modules\V3\Http\Requests;
 
 use rjapi\extension\BaseFormRequest;
 
-class UserMiddleware extends BaseFormRequest 
+class UserFormRequest extends BaseFormRequest 
 {
     // >>>props>>>
-    public $id = null;
+    public $id;
     // Attributes
-    public $first_name = null;
-    public $last_name = null;
-    public $password = null;
-    public $jwt = null;
-    public $permissions = null;
+    public $first_name;
+    public $last_name;
+    public $password;
+    public $jwt;
+    public $permissions;
     // bit_mask
     public $publisher = 1;
     public $editor = 2;

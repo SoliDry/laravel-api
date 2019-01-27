@@ -1,0 +1,172 @@
+#%RAML 1.0
+title: Vidbox Template Table
+baseUri: http://my-company.com/{version}
+version: v1
+mediaType:  application/vnd.api+json
+description: Template table of Vidbox
+types:
+  ID:
+    type: integer
+    required: true
+  Type:
+    type: string
+    required: true
+    minLength: 1
+    maxLength: 255
+  DataObject:
+    type: object
+    required: true
+  DataArray:
+    type: array
+    required: true
+  RelationshipsDataItem:
+    type: object
+    properties:
+      id: ID
+      type: Type
+  TemplateRelationships:
+    description: Template relationship description
+    type: object
+    properties:
+      data:
+        type: DataArray
+        items:
+          type: RelationshipsDataItem
+  TemplateAttributes:
+    description: Template attributes description
+    type: object
+    properties:
+      category_id:
+        description: Category identifier  (connected to category table)
+        required: true
+        type: integer
+      title:
+        description: Template title
+        required: true
+        type: string
+        maxLength: 50
+      description:
+        description: Template Description
+        required: true
+        type: string
+      thumbnail_url:
+        description: Image (url) to show template
+        type: string
+        required: true
+      example_vid_url:
+        description: Video Demo of template
+        type: string
+        required: true
+      template_json:
+        description: JSON data of Template
+        type: string
+        required: true
+      input_schema:
+        description: Alpaca Forms - Schema data for form inputs (define input form to edit template)
+        type: string
+        required: true
+      input_options:
+        description: Alpaca Forms - options data for form inputs (define input form to edit template)
+        type: string
+        required: true
+      input_data:
+        description: Alpaca Forms - data for form inputs (define input form to edit template)
+        type: string
+        required: true
+      input_view:
+        description: Alpaca Forms - input data for form inputs (define input form to edit template)
+        type: string
+        required: true
+  Template:
+    type: object
+    properties:
+      type: Type
+      id: ID
+      attributes: TemplateAttributes
+      relationships:
+        type: Category_templateRelationships
+  Category_templateRelationships:
+    type: object
+    properties:
+      data:
+        type: DataArray
+        items:
+          type: RelationshipsDataItem
+  Category_templateAttributes:
+    description: TemplatesCategories attributes description
+    type: object
+    properties:
+      title:
+        description: TemplatesCategories title
+        required: true
+        type: string
+        maxLength: 50
+      description:
+        description: TemplatesCategories Description
+        required: true
+        type: string
+  Category_template:
+    type: object
+    properties:
+      type: Type
+      id: ID
+      attributes: Category_templateAttributes
+      relationships:
+        type: TemplateRelationships[]
+/templates:
+  get:
+    queryParameters:
+      page:
+            type: integer
+            required: true
+            default: 1
+            example: 1
+            description: page number
+      limit:
+            type: integer
+            required: true
+            default: 15
+            example: 15
+            description: elements per page
+
+    responses:
+      200:
+        body:
+          application/json.vnd+json:
+            type: Template[]
+  post:
+    body:
+      application/json.vnd+json:
+        type: Template
+    responses:
+      200:
+        body:
+          application/json.vnd+json:
+            type: Template
+  /{id}:
+    get:
+      responses:
+        200:
+          body:
+            application/json.vnd+json:
+              type: Template
+    patch:
+      body:
+        application/json.vnd+json:
+          type: Template
+      responses:
+        200:
+          body:
+            application/json.vnd+json:
+              type: Template
+    delete:
+      responses:
+        204:
+
+    /Category:
+      get:
+        responses:
+          200:
+            body:
+              application/json.vnd+json:
+                type: Category_template[]
