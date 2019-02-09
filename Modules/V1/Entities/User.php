@@ -1,8 +1,7 @@
 <?php
 namespace Modules\V1\Entities;
 
-use Illuminate\Database\Eloquent\SoftDeletes;
-use rjapi\extension\BaseModel;
+use SoliDry\Extension\BaseModel;
 
 class User extends BaseModel 
 {

@@ -1,14 +1,14 @@
 <?php
 namespace Modules\V1\Http\Requests;
 
-use rjapi\extension\BaseFormRequest;
+use SoliDry\Extension\BaseFormRequest;
 
 class TagFormRequest extends BaseFormRequest 
 {
     // >>>props>>>
-    public $id = null;
+    public $id;
     // Attributes
-    public $title = null;
+    public $title;
     // <<<props<<<
 
     // >>>methods>>>
