@@ -1,7 +1,7 @@
 <?php
 namespace Modules\V1\Http\Controllers;
 
-use rjapi\extension\BaseController;
+use SoliDry\Extension\BaseController;
 
 class DefaultController extends BaseController 
 {
