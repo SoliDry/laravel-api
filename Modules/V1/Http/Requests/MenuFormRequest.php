@@ -1,16 +1,16 @@
 <?php
-namespace Modules\V1\Http\Middleware;
+namespace Modules\V1\Http\Requests;
 
-use rjapi\extension\BaseFormRequest;
+use SoliDry\Extension\BaseFormRequest;
 
-class MenuMiddleware extends BaseFormRequest 
+class MenuFormRequest extends BaseFormRequest 
 {
     // >>>props>>>
-    public $id = null;
+    public $id;
     // Attributes
-    public $title = null;
-    public $rfc = null;
-    public $parent_id = null;
+    public $title;
+    public $rfc;
+    public $parent_id;
     // <<<props<<<
 
     // >>>methods>>>

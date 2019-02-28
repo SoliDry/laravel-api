@@ -3,14 +3,18 @@ namespace Modules\V1\Entities;
 
 use SoliDry\Extension\BaseModel;
 
-class User extends BaseModel 
+class Topic extends BaseModel 
 {
     // >>>props>>>
     protected $primaryKey = 'id';
-    protected $table = 'user';
+    protected $table = 'topic';
     public $timestamps = false;
     // <<<props<<<
     // >>>methods>>>
 
+    public function article() 
+    {
+        return $this->hasMany(Article::class);
+    }
     // <<<methods<<<
 }

@@ -1,14 +1,14 @@
 <?php
-namespace Modules\V1\Http\Middleware;
+namespace Modules\V1\Http\Requests;
 
-use rjapi\extension\BaseFormRequest;
+use SoliDry\Extension\BaseFormRequest;
 
-class TagMiddleware extends BaseFormRequest 
+class TopicFormRequest extends BaseFormRequest 
 {
     // >>>props>>>
-    public $id = null;
+    public $id;
     // Attributes
-    public $title = null;
+    public $title;
     // <<<props<<<
 
     // >>>methods>>>
@@ -20,7 +20,7 @@ class TagMiddleware extends BaseFormRequest
     public function rules(): array 
     {
         return [
-            'title' => 'string|required|min:3',
+            'title' => 'required|string|min:16|max:256',
         ];
     }
 

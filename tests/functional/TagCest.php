@@ -13,7 +13,7 @@ class TagCest
     public function tryTagCreate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Tag create');
-        $I->sendPOST('/v1/tag', '{"data":{"type":"tag","attributes":{"title":"jboyle"}}}');
+        $I->sendPOST('/v1/tag', '{"data":{"type":"tag","attributes":{"title":"reggie.miller"}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -22,7 +22,7 @@ class TagCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'jboyle',
+      'title' => 'reggie.miller',
     ),
   ),
 ));
@@ -40,7 +40,7 @@ class TagCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'jboyle',
+      'title' => 'reggie.miller',
     ),
   ),
 ));
@@ -58,7 +58,7 @@ class TagCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'jboyle',
+      'title' => 'reggie.miller',
     ),
   ),
 ));
@@ -67,7 +67,7 @@ class TagCest
     public function tryTagUpdate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Tag update');
-        $I->sendPATCH('/v1/tag/1', '{"data":{"type":"tag","attributes":{"title":"jboyle"}}}');
+        $I->sendPATCH('/v1/tag/1', '{"data":{"type":"tag","attributes":{"title":"reggie.miller"}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -76,7 +76,7 @@ class TagCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'jboyle',
+      'title' => 'reggie.miller',
     ),
   ),
 ));

@@ -32,7 +32,7 @@ class Kernel extends HttpKernel
 //            \Illuminate\View\Middleware\ShareErrorsFromSession::class,
 //            \App\Http\Middleware\VerifyCsrfToken::class,
 //            \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \Modules\V1\Http\Middleware\TestMiddleware::class,
+//            \Modules\V1\Http\Middleware\TestMiddleware::class,
         ],
 
         'api' => [
@@ -49,12 +49,12 @@ class Kernel extends HttpKernel
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
-        'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
-        'can' => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
-        'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'jwt' => \rjapi\extension\BaseJwt::class,
+//        'auth' => \Illuminate\Auth\Middleware\Authenticate::class,
+//        'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
+//        'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
+//        'can' => \Illuminate\Auth\Middleware\Authorize::class,
+//        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
+//        'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+//        'jwt' => \rjapi\extension\BaseJwt::class,
     ];
 }

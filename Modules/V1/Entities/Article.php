@@ -2,7 +2,7 @@
 namespace Modules\V1\Entities;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
-use rjapi\extension\BaseModel;
+use SoliDry\Extension\BaseModel;
 
 class Article extends BaseModel 
 {
@@ -20,6 +20,10 @@ class Article extends BaseModel
     public function tag() 
     {
         return $this->belongsToMany(Tag::class, 'tag_article');
+    }
+    public function topic() 
+    {
+        return $this->belongsTo(Topic::class);
     }
     // <<<methods<<<
 }

@@ -11,6 +11,7 @@ class CreateUserTable extends Migration
             $table->bigIncrements('id');
             $table->string('first_name', 256);
             $table->string('last_name', 256);
+            $table->index(['first_name', 'last_name']);
                 // user password to refresh JWT (encrypted with password_hash)
             $table->string('password', 255);
                 // Special field to run JWT Auth via requests

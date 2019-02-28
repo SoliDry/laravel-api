@@ -1,23 +1,23 @@
 <?php
-namespace Modules\V1\Http\Middleware;
+namespace Modules\V1\Http\Requests;
 
-use rjapi\extension\BaseFormRequest;
+use SoliDry\Extension\BaseFormRequest;
 
-class ArticleMiddleware extends BaseFormRequest 
+class ArticleFormRequest extends BaseFormRequest 
 {
     // >>>props>>>
-    public $id = null;
+    public $id;
     // Attributes
-    public $title = null;
-    public $description = null;
-    public $url = null;
-    public $show_in_top = null;
-    public $status = null;
-    public $topic_id = null;
-    public $rate = null;
-    public $date_posted = null;
-    public $time_to_live = null;
-    public $deleted_at = null;
+    public $title;
+    public $description;
+    public $url;
+    public $show_in_top;
+    public $status;
+    public $topic_id;
+    public $rate;
+    public $date_posted;
+    public $time_to_live;
+    public $deleted_at;
     // <<<props<<<
 
     // >>>methods>>>

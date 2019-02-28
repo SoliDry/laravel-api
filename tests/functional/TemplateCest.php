@@ -13,7 +13,7 @@ class TemplateCest
     public function tryTemplateCreate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Template create');
-        $I->sendPOST('/v1/template', '{"data":{"type":"template","attributes":{"category_id":7,"title":"lue.rowe","description":"name.predovic","thumbnail_url":"agustin27","example_vid_url":"eino.baumbach","template_json":"bdare","input_schema":"fdietrich","input_options":"swalter","input_data":"franco.batz","input_view":"abbott.lavina"}}}');
+        $I->sendPOST('/v1/template', '{"data":{"type":"template","attributes":{"category_id":5,"title":"wisoky.tessie","description":"josie58","thumbnail_url":"eveline.kuhn","example_vid_url":"lulu61","template_json":"mraz.gerhard","input_schema":"sidney.bogisich","input_options":"vidal.braun","input_data":"zrunte","input_view":"annie46"}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -22,16 +22,16 @@ class TemplateCest
     'id' => 1,
     'attributes' => 
     array (
-      'category_id' => 7,
-      'title' => 'lue.rowe',
-      'description' => 'name.predovic',
-      'thumbnail_url' => 'agustin27',
-      'example_vid_url' => 'eino.baumbach',
-      'template_json' => 'bdare',
-      'input_schema' => 'fdietrich',
-      'input_options' => 'swalter',
-      'input_data' => 'franco.batz',
-      'input_view' => 'abbott.lavina',
+      'category_id' => 5,
+      'title' => 'wisoky.tessie',
+      'description' => 'josie58',
+      'thumbnail_url' => 'eveline.kuhn',
+      'example_vid_url' => 'lulu61',
+      'template_json' => 'mraz.gerhard',
+      'input_schema' => 'sidney.bogisich',
+      'input_options' => 'vidal.braun',
+      'input_data' => 'zrunte',
+      'input_view' => 'annie46',
     ),
   ),
 ));
@@ -49,16 +49,16 @@ class TemplateCest
     'id' => 1,
     'attributes' => 
     array (
-      'category_id' => 7,
-      'title' => 'lue.rowe',
-      'description' => 'name.predovic',
-      'thumbnail_url' => 'agustin27',
-      'example_vid_url' => 'eino.baumbach',
-      'template_json' => 'bdare',
-      'input_schema' => 'fdietrich',
-      'input_options' => 'swalter',
-      'input_data' => 'franco.batz',
-      'input_view' => 'abbott.lavina',
+      'category_id' => 5,
+      'title' => 'wisoky.tessie',
+      'description' => 'josie58',
+      'thumbnail_url' => 'eveline.kuhn',
+      'example_vid_url' => 'lulu61',
+      'template_json' => 'mraz.gerhard',
+      'input_schema' => 'sidney.bogisich',
+      'input_options' => 'vidal.braun',
+      'input_data' => 'zrunte',
+      'input_view' => 'annie46',
     ),
   ),
 ));
@@ -76,16 +76,16 @@ class TemplateCest
     'id' => 1,
     'attributes' => 
     array (
-      'category_id' => 7,
-      'title' => 'lue.rowe',
-      'description' => 'name.predovic',
-      'thumbnail_url' => 'agustin27',
-      'example_vid_url' => 'eino.baumbach',
-      'template_json' => 'bdare',
-      'input_schema' => 'fdietrich',
-      'input_options' => 'swalter',
-      'input_data' => 'franco.batz',
-      'input_view' => 'abbott.lavina',
+      'category_id' => 5,
+      'title' => 'wisoky.tessie',
+      'description' => 'josie58',
+      'thumbnail_url' => 'eveline.kuhn',
+      'example_vid_url' => 'lulu61',
+      'template_json' => 'mraz.gerhard',
+      'input_schema' => 'sidney.bogisich',
+      'input_options' => 'vidal.braun',
+      'input_data' => 'zrunte',
+      'input_view' => 'annie46',
     ),
   ),
 ));
@@ -94,7 +94,7 @@ class TemplateCest
     public function tryTemplateUpdate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Template update');
-        $I->sendPATCH('/v1/template/1', '{"data":{"type":"template","attributes":{"category_id":7,"title":"lue.rowe","description":"name.predovic","thumbnail_url":"agustin27","example_vid_url":"eino.baumbach","template_json":"bdare","input_schema":"fdietrich","input_options":"swalter","input_data":"franco.batz","input_view":"abbott.lavina"}}}');
+        $I->sendPATCH('/v1/template/1', '{"data":{"type":"template","attributes":{"category_id":5,"title":"wisoky.tessie","description":"josie58","thumbnail_url":"eveline.kuhn","example_vid_url":"lulu61","template_json":"mraz.gerhard","input_schema":"sidney.bogisich","input_options":"vidal.braun","input_data":"zrunte","input_view":"annie46"}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -103,16 +103,16 @@ class TemplateCest
     'id' => 1,
     'attributes' => 
     array (
-      'category_id' => 7,
-      'title' => 'lue.rowe',
-      'description' => 'name.predovic',
-      'thumbnail_url' => 'agustin27',
-      'example_vid_url' => 'eino.baumbach',
-      'template_json' => 'bdare',
-      'input_schema' => 'fdietrich',
-      'input_options' => 'swalter',
-      'input_data' => 'franco.batz',
-      'input_view' => 'abbott.lavina',
+      'category_id' => 5,
+      'title' => 'wisoky.tessie',
+      'description' => 'josie58',
+      'thumbnail_url' => 'eveline.kuhn',
+      'example_vid_url' => 'lulu61',
+      'template_json' => 'mraz.gerhard',
+      'input_schema' => 'sidney.bogisich',
+      'input_options' => 'vidal.braun',
+      'input_data' => 'zrunte',
+      'input_view' => 'annie46',
     ),
   ),
 ));

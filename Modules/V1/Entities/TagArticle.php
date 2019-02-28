@@ -1,7 +1,7 @@
 <?php
 namespace Modules\V1\Entities;
 
-use rjapi\extension\BaseModel;
+use SoliDry\Extension\BaseModel;
 
 class TagArticle extends BaseModel 
 {
