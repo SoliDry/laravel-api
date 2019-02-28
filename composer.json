@@ -8,7 +8,7 @@
         "php": ">=7.0",
         "laravel/framework": ">=5.3",
         "folklore/graphql": "^1.1",
-        "SoliDry/api-generator": "dev-issue-144-modules"
+        "SoliDry/api-generator": "dev-develop"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
