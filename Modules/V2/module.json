@@ -1,0 +1,14 @@
+{
+    "name": "V2",
+    "alias": "v2",
+    "description": "",
+    "keywords": [],
+    "active": 1,
+    "order": 0,
+    "providers": [
+        "Modules\\V2\\Providers\\V2ServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
