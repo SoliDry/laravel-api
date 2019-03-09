@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c611296e66e4e9121bfec573dfd94b71",
+    "content-hash": "2e6c7740e597a9417b34ff25403bc9bf",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -1567,7 +1567,7 @@
         },
         {
             "name": "solidry/api-generator",
-            "version": "dev-issue-144-modules",
+            "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SoliDry/api-generator.git",
