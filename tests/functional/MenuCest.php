@@ -13,7 +13,7 @@ class MenuCest
     public function tryMenuCreate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Menu create');
-        $I->sendPOST('/v1/menu', '{"data":{"type":"menu","attributes":{"title":"nedra.gulgowski","rfc":"libbie61","parent_id":8}}}');
+        $I->sendPOST('/v3/menu', '{"data":{"type":"menu","attributes":{"title":"bridgette.price","rfc":"dewayne.schaden","parent_id":2}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -22,7 +22,7 @@ class MenuCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'nedra.gulgowski',
+      'title' => 'bridgette.price',
     ),
   ),
 ));
@@ -31,7 +31,7 @@ class MenuCest
     public function tryMenuIndex(FunctionalTester $I) 
     {
         $I->amGoingTo('test Menu index');
-        $I->sendGET('/v1/menu');
+        $I->sendGET('/v3/menu');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -40,7 +40,7 @@ class MenuCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'nedra.gulgowski',
+      'title' => 'bridgette.price',
     ),
   ),
 ));
@@ -49,7 +49,7 @@ class MenuCest
     public function tryMenuView(FunctionalTester $I) 
     {
         $I->amGoingTo('test Menu view');
-        $I->sendGET('/v1/menu/1');
+        $I->sendGET('/v3/menu/1');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -58,7 +58,7 @@ class MenuCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'nedra.gulgowski',
+      'title' => 'bridgette.price',
     ),
   ),
 ));
@@ -67,7 +67,7 @@ class MenuCest
     public function tryMenuUpdate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Menu update');
-        $I->sendPATCH('/v1/menu/1', '{"data":{"type":"menu","attributes":{"title":"nedra.gulgowski","rfc":"libbie61","parent_id":8}}}');
+        $I->sendPATCH('/v3/menu/1', '{"data":{"type":"menu","attributes":{"title":"bridgette.price","rfc":"dewayne.schaden","parent_id":2}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -76,7 +76,7 @@ class MenuCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'nedra.gulgowski',
+      'title' => 'bridgette.price',
     ),
   ),
 ));
@@ -85,7 +85,7 @@ class MenuCest
     public function tryMenuDelete(FunctionalTester $I) 
     {
         $I->amGoingTo('test Menu delete');
-        $I->sendDELETE('/v1/menu/1');
+        $I->sendDELETE('/v3/menu/1');
     }
 
     // <<<methods<<<

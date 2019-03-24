@@ -13,18 +13,18 @@ class ArticleCest
     public function tryArticleCreate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Article create');
-        $I->sendPOST('/v1/article', '{"data":{"type":"article","attributes":{"title":"faustino.kling","description":"rdavis","url":"damon.bogisich","show_in_top":false,"status":"draft","topic_id":5,"rate":9,"date_posted":"1994-06-21","time_to_live":"20:46:42","deleted_at":"1974-10-10 12:26:33"}}}');
+        $I->sendPOST('/v3/article', '{"data":{"type":"article","attributes":{"id":"5c977559aa461","title":"gislason.mollie","description":"gerard24","url":"lhill","show_in_top":true,"status":"draft","topic_id":9,"rate":8,"date_posted":"2013-02-25","time_to_live":"19:50:27","deleted_at":"1992-02-08 14:46:26"}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
   array (
     'type' => 'article',
-    'id' => 1,
+    'id' => '5c977559aa461',
     'attributes' => 
     array (
-      'title' => 'faustino.kling',
-      'description' => 'rdavis',
-      'topic_id' => 5,
+      'title' => 'gislason.mollie',
+      'description' => 'gerard24',
+      'topic_id' => 9,
     ),
   ),
 ));
@@ -33,18 +33,18 @@ class ArticleCest
     public function tryArticleIndex(FunctionalTester $I) 
     {
         $I->amGoingTo('test Article index');
-        $I->sendGET('/v1/article');
+        $I->sendGET('/v3/article');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
   array (
     'type' => 'article',
-    'id' => 1,
+    'id' => '5c977559aa461',
     'attributes' => 
     array (
-      'title' => 'faustino.kling',
-      'description' => 'rdavis',
-      'topic_id' => 5,
+      'title' => 'gislason.mollie',
+      'description' => 'gerard24',
+      'topic_id' => 9,
     ),
   ),
 ));
@@ -53,18 +53,18 @@ class ArticleCest
     public function tryArticleView(FunctionalTester $I) 
     {
         $I->amGoingTo('test Article view');
-        $I->sendGET('/v1/article/1');
+        $I->sendGET('/v3/article/5c977559aa461');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
   array (
     'type' => 'article',
-    'id' => 1,
+    'id' => '5c977559aa461',
     'attributes' => 
     array (
-      'title' => 'faustino.kling',
-      'description' => 'rdavis',
-      'topic_id' => 5,
+      'title' => 'gislason.mollie',
+      'description' => 'gerard24',
+      'topic_id' => 9,
     ),
   ),
 ));
@@ -73,18 +73,18 @@ class ArticleCest
     public function tryArticleUpdate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Article update');
-        $I->sendPATCH('/v1/article/1', '{"data":{"type":"article","attributes":{"title":"faustino.kling","description":"rdavis","url":"damon.bogisich","show_in_top":false,"status":"draft","topic_id":5,"rate":9,"date_posted":"1994-06-21","time_to_live":"20:46:42","deleted_at":"1974-10-10 12:26:33"}}}');
+        $I->sendPATCH('/v3/article/5c977559aa461', '{"data":{"type":"article","attributes":{"id":"5c977559aa461","title":"gislason.mollie","description":"gerard24","url":"lhill","show_in_top":true,"status":"draft","topic_id":9,"rate":8,"date_posted":"2013-02-25","time_to_live":"19:50:27","deleted_at":"1992-02-08 14:46:26"}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
   array (
     'type' => 'article',
-    'id' => 1,
+    'id' => '5c977559aa461',
     'attributes' => 
     array (
-      'title' => 'faustino.kling',
-      'description' => 'rdavis',
-      'topic_id' => 5,
+      'title' => 'gislason.mollie',
+      'description' => 'gerard24',
+      'topic_id' => 9,
     ),
   ),
 ));
@@ -93,7 +93,7 @@ class ArticleCest
     public function tryArticleDelete(FunctionalTester $I) 
     {
         $I->amGoingTo('test Article delete');
-        $I->sendDELETE('/v1/article/1');
+        $I->sendDELETE('/v3/article/5c977559aa461');
     }
 
     // <<<methods<<<
