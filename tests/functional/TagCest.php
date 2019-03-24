@@ -13,7 +13,7 @@ class TagCest
     public function tryTagCreate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Tag create');
-        $I->sendPOST('/v1/tag', '{"data":{"type":"tag","attributes":{"title":"reggie.miller"}}}');
+        $I->sendPOST('/v3/tag', '{"data":{"type":"tag","attributes":{"title":"candace.lemke"}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -22,7 +22,7 @@ class TagCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'reggie.miller',
+      'title' => 'candace.lemke',
     ),
   ),
 ));
@@ -31,7 +31,7 @@ class TagCest
     public function tryTagIndex(FunctionalTester $I) 
     {
         $I->amGoingTo('test Tag index');
-        $I->sendGET('/v1/tag');
+        $I->sendGET('/v3/tag');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -40,7 +40,7 @@ class TagCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'reggie.miller',
+      'title' => 'candace.lemke',
     ),
   ),
 ));
@@ -49,7 +49,7 @@ class TagCest
     public function tryTagView(FunctionalTester $I) 
     {
         $I->amGoingTo('test Tag view');
-        $I->sendGET('/v1/tag/1');
+        $I->sendGET('/v3/tag/1');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -58,7 +58,7 @@ class TagCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'reggie.miller',
+      'title' => 'candace.lemke',
     ),
   ),
 ));
@@ -67,7 +67,7 @@ class TagCest
     public function tryTagUpdate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Tag update');
-        $I->sendPATCH('/v1/tag/1', '{"data":{"type":"tag","attributes":{"title":"reggie.miller"}}}');
+        $I->sendPATCH('/v3/tag/1', '{"data":{"type":"tag","attributes":{"title":"candace.lemke"}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -76,7 +76,7 @@ class TagCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'reggie.miller',
+      'title' => 'candace.lemke',
     ),
   ),
 ));
@@ -85,7 +85,7 @@ class TagCest
     public function tryTagDelete(FunctionalTester $I) 
     {
         $I->amGoingTo('test Tag delete');
-        $I->sendDELETE('/v1/tag/1');
+        $I->sendDELETE('/v3/tag/1');
     }
 
     // <<<methods<<<

@@ -8,13 +8,6 @@ use Illuminate\Database\Eloquent\Factory;
 class V1ServiceProvider extends ServiceProvider
 {
     /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = false;
-
-    /**
      * Boot the application events.
      *
      * @return void
@@ -35,7 +28,7 @@ class V1ServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->register(RouteServiceProvider::class);
     }
 
     /**
@@ -66,7 +59,7 @@ class V1ServiceProvider extends ServiceProvider
 
         $this->publishes([
             $sourcePath => $viewPath
-        ]);
+        ],'views');
 
         $this->loadViewsFrom(array_merge(array_map(function ($path) {
             return $path . '/modules/v1';
@@ -91,7 +84,8 @@ class V1ServiceProvider extends ServiceProvider
 
     /**
      * Register an additional directory of factories.
-     * @source https://github.com/sebastiaanluca/laravel-resource-flow/blob/develop/src/Modules/ModuleServiceProvider.php#L66
+     *
+     * @return void
      */
     public function registerFactories()
     {

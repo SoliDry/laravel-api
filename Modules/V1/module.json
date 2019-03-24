@@ -9,8 +9,6 @@
         "Modules\\V1\\Providers\\V1ServiceProvider"
     ],
     "aliases": {},
-    "files": [
-        "start.php"
-    ],
+    "files": [],
     "requires": []
 }

@@ -13,7 +13,7 @@ servers:
         - 443
       defualt: 80
     basePath:
-      default: v1
+      default: v2
 # to declare globally which files to include with other components declarations
 uses:
   topics: oas/topic.yaml
