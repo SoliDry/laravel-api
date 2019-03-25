@@ -27,7 +27,7 @@ services:
     restart: unless-stopped
     tty: true
     ports:
-      - "80:80"
+      - "8888:80"
       - "443:443"
     volumes:
       - ./:/var/www
@@ -53,6 +53,12 @@ services:
       - ./mysql/my.cnf:/etc/mysql/my.cnf
     networks:
       - app-network
+
+  # Redis
+  cache:
+    image: redis:3.0
+    ports:
+      - "63792:6379"
 
 #Docker Networks
 networks:

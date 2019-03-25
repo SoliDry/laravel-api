@@ -1,0 +1,58 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:alpine
+    working_dir: /code
+    volumes:
+      - ./:/code
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+    ports:
+      - "8088:80"
+    links:
+      - app
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: digitalocean.com/php
+    ports:
+     - "9000:9000"
+    volumes:
+      - ./:/code
+    working_dir: /code
+    environment:
+      - "APP_NAME=AdWheelCore"
+      - "DB_PORT=27017"
+      - "DB_HOST=database"
+      - "DB_USERNAME=secret"
+      - "DB_PASSWORD=secret"
+      - "DB_DATABASE=adwheel"
+      - "DB_CONNECTION=mongodb"
+      - "REDIS_PORT=6379"
+      - "REDIS_HOST=cache"
+      - "SESSION_DRIVER=redis"
+      - "CACHE_DRIVER=redis"
+      - "MAIL_DRIVER=log"
+      - "APP_KEY=base64:qWNaf831lnNPV5XOlm8QrrSZq7hCraDc6maVXR/WzYQ="
+      - "JWT_SECRET=EWY1SclZXE8F8hPTe8cRVI8XgxCgzLjqBcGlrOszZdMpJqXi5npaPgAOpuyyAYR1"
+    links:
+      - database
+      - cache
+  database:
+    image: mysql:5.7.22
+    restart: unless-stopped
+    tty: true
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: HkcRUm2pMY0KOEdZ
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    volumes:
+      - ./dbdata:/var/lib/mysql
+      - ./mysql/my.cnf:/etc/mysql/my.cnf
+  cache:
+    image: redis:3.0
+    ports:
+      - "63792:6379"
