@@ -17,6 +17,7 @@ services:
     volumes:
        - ./:/var/www
        - ./php/local.ini:/usr/local/etc/php/conf.d/local.ini
+       - ./php/laravel/logs/:/var/www/storage/logs/
     networks:
       - app-network
 

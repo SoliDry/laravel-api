@@ -12,3 +12,4 @@ yarn-error.log
 .gen/
 dbdata/*
 nginx/logs/*
+php/laravel/logs/*
