@@ -53,13 +53,13 @@ return [
     ],
     'cache'=> [
         'tag'=> [
-            'enabled' => true,
+            'enabled' => false,
             'stampede_xfetch' => true,
             'stampede_beta' => 1.1,
             'ttl' => 3600,
         ],
         'article'=> [
-            'enabled' => true,
+            'enabled' => false,
             'stampede_xfetch' => true,
             'stampede_beta' => 1.5,
             'ttl' => 300,
