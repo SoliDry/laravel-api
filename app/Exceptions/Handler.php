@@ -4,9 +4,12 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
+use SoliDry\Exceptions\ErrorHandler;
 
 class Handler extends ExceptionHandler
 {
+    use ErrorHandler;
+
     /**
      * A list of the exception types that are not reported.
      *
@@ -40,12 +43,12 @@ class Handler extends ExceptionHandler
     /**
      * Render an exception into an HTTP response.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \Exception  $exception
-     * @return \Illuminate\Http\Response
+     * @param  \Illuminate\Http\Request $request
+     * @param  \Exception $exception
+     * @return \Illuminate\Http\JsonResponse
      */
     public function render($request, Exception $exception)
     {
-        return parent::render($request, $exception);
+        return $this->renderJsonApi($request, $exception);
     }
 }

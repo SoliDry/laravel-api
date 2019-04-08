@@ -1875,12 +1875,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/SoliDry/api-generator.git",
-                "reference": "329790580cdd777286fbf8b97bfd9b6bc0c958d4"
+                "reference": "19a75f31f47420843b8f769eb1d36f7f6369d30d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SoliDry/api-generator/zipball/329790580cdd777286fbf8b97bfd9b6bc0c958d4",
-                "reference": "329790580cdd777286fbf8b97bfd9b6bc0c958d4",
+                "url": "https://api.github.com/repos/SoliDry/api-generator/zipball/19a75f31f47420843b8f769eb1d36f7f6369d30d",
+                "reference": "19a75f31f47420843b8f769eb1d36f7f6369d30d",
                 "shasum": ""
             },
             "require": {
@@ -1935,7 +1935,7 @@
                 "open-api",
                 "openapi"
             ],
-            "time": "2019-03-25T04:45:32+00:00"
+            "time": "2019-03-30T11:30:56+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
