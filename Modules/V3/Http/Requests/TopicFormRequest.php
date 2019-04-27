@@ -20,14 +20,14 @@ class TopicFormRequest extends BaseFormRequest
     public function rules(): array 
     {
         return [
-            'title' => 'required|string|min:16|max:256',
+            'title' => 'string|required|min:16|max:256',
         ];
     }
 
     public function relations(): array 
     {
         return [
-            'article',
+
         ];
     }
     // <<<methods<<<

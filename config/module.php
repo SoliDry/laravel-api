@@ -1,6 +1,6 @@
 <?php
 return [
     'modules'=> [
-        'v3',
+        'v2',
     ]
 ];

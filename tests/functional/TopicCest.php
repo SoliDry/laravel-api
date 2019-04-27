@@ -13,7 +13,7 @@ class TopicCest
     public function tryTopicCreate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Topic create');
-        $I->sendPOST('/v3/topic', '{"data":{"type":"topic","attributes":{"title":"verla83"}}}');
+        $I->sendPOST('/v3/topic', '{"data":{"type":"topic","attributes":{"title":"alexandre44"}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -22,7 +22,7 @@ class TopicCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'verla83',
+      'title' => 'alexandre44',
     ),
   ),
 ));
@@ -40,7 +40,7 @@ class TopicCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'verla83',
+      'title' => 'alexandre44',
     ),
   ),
 ));
@@ -58,7 +58,7 @@ class TopicCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'verla83',
+      'title' => 'alexandre44',
     ),
   ),
 ));
@@ -67,7 +67,7 @@ class TopicCest
     public function tryTopicUpdate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Topic update');
-        $I->sendPATCH('/v3/topic/1', '{"data":{"type":"topic","attributes":{"title":"verla83"}}}');
+        $I->sendPATCH('/v3/topic/1', '{"data":{"type":"topic","attributes":{"title":"alexandre44"}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -76,7 +76,7 @@ class TopicCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'verla83',
+      'title' => 'alexandre44',
     ),
   ),
 ));

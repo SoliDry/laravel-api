@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab794a6b254f38631200d94b4f0143ba",
+    "content-hash": "7118c72ab2905fbe3990f6ac94f3a0d7",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1871,19 +1871,21 @@
         },
         {
             "name": "solidry/api-generator",
-            "version": "dev-master",
+            "version": "dev-issue-152",
             "source": {
                 "type": "git",
                 "url": "https://github.com/SoliDry/api-generator.git",
-                "reference": "101889aab8114ee86d64ee52bb510f0d4bc3f954"
+                "reference": "da741c63536898c3f3ba7aca2a7a3bef7275d86b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/SoliDry/api-generator/zipball/101889aab8114ee86d64ee52bb510f0d4bc3f954",
-                "reference": "101889aab8114ee86d64ee52bb510f0d4bc3f954",
+                "url": "https://api.github.com/repos/SoliDry/api-generator/zipball/da741c63536898c3f3ba7aca2a7a3bef7275d86b",
+                "reference": "da741c63536898c3f3ba7aca2a7a3bef7275d86b",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
+                "ext-pdo": "*",
                 "lcobucci/jwt": "^3.2",
                 "league/fractal": "~0.14",
                 "nwidart/laravel-modules": ">=3.1",
@@ -1935,7 +1937,7 @@
                 "open-api",
                 "openapi"
             ],
-            "time": "2019-03-25T04:33:48+00:00"
+            "time": "2019-04-15T14:53:29+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

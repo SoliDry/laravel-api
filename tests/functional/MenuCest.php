@@ -13,7 +13,7 @@ class MenuCest
     public function tryMenuCreate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Menu create');
-        $I->sendPOST('/v3/menu', '{"data":{"type":"menu","attributes":{"title":"bridgette.price","rfc":"dewayne.schaden","parent_id":2}}}');
+        $I->sendPOST('/v3/menu', '{"data":{"type":"menu","attributes":{"title":"ortiz.emiliano","rfc":"mac30","parent_id":0}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -22,7 +22,7 @@ class MenuCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'bridgette.price',
+      'title' => 'ortiz.emiliano',
     ),
   ),
 ));
@@ -40,7 +40,7 @@ class MenuCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'bridgette.price',
+      'title' => 'ortiz.emiliano',
     ),
   ),
 ));
@@ -58,7 +58,7 @@ class MenuCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'bridgette.price',
+      'title' => 'ortiz.emiliano',
     ),
   ),
 ));
@@ -67,7 +67,7 @@ class MenuCest
     public function tryMenuUpdate(FunctionalTester $I) 
     {
         $I->amGoingTo('test Menu update');
-        $I->sendPATCH('/v3/menu/1', '{"data":{"type":"menu","attributes":{"title":"bridgette.price","rfc":"dewayne.schaden","parent_id":2}}}');
+        $I->sendPATCH('/v3/menu/1', '{"data":{"type":"menu","attributes":{"title":"ortiz.emiliano","rfc":"mac30","parent_id":0}}}');
         $I->seeResponseIsJson();
         $I->seeResponseContainsJson(array (
   'data' => 
@@ -76,7 +76,7 @@ class MenuCest
     'id' => 1,
     'attributes' => 
     array (
-      'title' => 'bridgette.price',
+      'title' => 'ortiz.emiliano',
     ),
   ),
 ));
