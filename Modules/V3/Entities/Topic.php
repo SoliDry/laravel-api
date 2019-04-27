@@ -12,9 +12,5 @@ class Topic extends BaseModel
     // <<<props<<<
     // >>>methods>>>
 
-    public function article() 
-    {
-        return $this->hasMany(Article::class);
-    }
     // <<<methods<<<
 }

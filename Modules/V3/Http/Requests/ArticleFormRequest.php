@@ -29,7 +29,7 @@ class ArticleFormRequest extends BaseFormRequest
     public function rules(): array 
     {
         return [
-            'title' => 'required|string|min:16|max:256|',
+            'title' => 'string|required|min:16|max:256',
             'description' => 'required|string|min:32|max:1024|',
             'url' => 'string|min:16|max:255|',
                 // Show at the top of main page
